@@ -14,7 +14,7 @@
 // ============================================
 // Your EmailJS credentials
 const EMAILJS_PUBLIC_KEY = 'ueUaYppajTcNezuEl';
-const EMAILJS_SERVICE_ID = 'service_kmlfd25';
+const EMAILJS_SERVICE_ID = 'service_gao2w71';
 const EMAILJS_TEMPLATE_ID = 'template_7wok99u';
 
 // ============================================
