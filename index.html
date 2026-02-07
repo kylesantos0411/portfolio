@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Kai - Python Developer specializing in automation and AI. Building smart solutions for a better future.">
+  <meta name="keywords" content="Python, Developer, Automation, AI, Portfolio, Software Engineer">
+  <meta name="author" content="Kai">
+
+  <title>Kai | Automating the Future, One Script at a Time</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts - JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Google Analytics - Replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__container">
+      <a href="#" class="nav__logo">
+        <span>&lt;</span>kai<span>/&gt;</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#electronics" class="nav__link">Electronics</a></li>
+        <li><a href="#blog" class="nav__link">Blog</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon" style="display:none;" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <a href="assets/resume.pdf" class="btn btn--primary" download>Resume</a>
+        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__code-bg" id="codeBg"></div>
+
+    <div class="hero__content">
+      <div class="hero__terminal">
+        <div class="hero__terminal-header">
+          <div class="hero__terminal-dot hero__terminal-dot--red"></div>
+          <div class="hero__terminal-dot hero__terminal-dot--yellow"></div>
+          <div class="hero__terminal-dot hero__terminal-dot--green"></div>
+        </div>
+        <div class="hero__prompt">kai@portfolio:~$</div>
+        <div class="hero__tagline">
+          <span>&gt;</span>
+          <span id="typingText"></span>
+          <span class="typing-cursor"></span>
+        </div>
+      </div>
+
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--secondary">Contact Me</a>
+      </div>
+
+      <div class="hero__social">
+        <a href="https://github.com/kylesantos0411" target="_blank" rel="noopener noreferrer" class="hero__social-link"
+          aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/santos-kyle-a-14287b349" target="_blank" rel="noopener noreferrer"
+          class="hero__social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <a href="mailto:kylesantos0411@gmail.com" class="hero__social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__content fade-in">
+        <div class="about__text">
+          <h3>// about_me</h3>
+          <h2>Hello, I'm Kai</h2>
+          <p>
+            I'm a Python developer passionate about automation and leveraging AI to build
+            smarter solutions. My journey in tech started with curiosity about how things work,
+            and evolved into a career of making them work better.
+          </p>
+          <p>
+            When I'm not writing code, you'll find me tinkering with electronics, exploring
+            new AI tools, or automating another mundane task that shouldn't require human attention.
+          </p>
+          <div class="about__skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Automation</span>
+            <span class="skill-tag">AI/ML</span>
+            <span class="skill-tag">APIs</span>
+            <span class="skill-tag">Web Scraping</span>
+            <span class="skill-tag">Data Processing</span>
+            <span class="skill-tag">Electronics</span>
+            <span class="skill-tag">IoT</span>
+          </div>
+        </div>
+        <div class="about__image">
+          <div class="about__code-block">
+            <pre><code><span class="code-keyword">class</span> <span class="code-function">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self.name = <span class="code-string">"Kai"</span>
+        self.role = <span class="code-string">"Python Developer"</span>
+        self.focus = [
+            <span class="code-string">"Automation"</span>,
+            <span class="code-string">"AI Integration"</span>,
+            <span class="code-string">"Electronics"</span>
+        ]
+        self.currently_learning = <span class="code-string">"Always something new"</span>
+    
+    <span class="code-keyword">def</span> <span class="code-function">get_daily_routine</span>(self):
+        <span class="code-keyword">return</span> <span class="code-string">"Code → Automate → Repeat"</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__subtitle">A selection of things I've built</p>
+      </div>
+
+      <div class="projects__grid">
+        <!-- Project 1 -->
+        <div class="card project-card fade-in">
+          <div class="project-card__image">
+            <!-- Add project screenshot here -->
+            <span>Project Screenshot</span>
+          </div>
+          <h3 class="project-card__title">Automation Framework</h3>
+          <p class="project-card__description">
+            A comprehensive automation framework for handling repetitive tasks with
+            scheduling, error handling, and notification systems.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">Schedule</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="btn btn--secondary">View Code</a>
+            <a href="#" class="btn btn--ghost">Live Demo →</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card project-card fade-in">
+          <div class="project-card__image">
+            <span>Project Screenshot</span>
+          </div>
+          <h3 class="project-card__title">AI Data Analyzer</h3>
+          <p class="project-card__description">
+            An intelligent data analysis tool that uses machine learning to identify
+            patterns and generate insights from complex datasets.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Scikit-learn</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="btn btn--secondary">View Code</a>
+            <a href="#" class="btn btn--ghost">Live Demo →</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card project-card fade-in">
+          <div class="project-card__image">
+            <span>Project Screenshot</span>
+          </div>
+          <h3 class="project-card__title">IoT Home Controller</h3>
+          <p class="project-card__description">
+            A smart home automation system built with Raspberry Pi, integrating
+            sensors and actuators for intelligent environment control.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MQTT</span>
+            <span class="tech-tag">Raspberry Pi</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="btn btn--secondary">View Code</a>
+            <a href="#" class="btn btn--ghost">Live Demo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline Section -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">Experience</h2>
+        <p class="section__subtitle">My professional journey</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2024 - Present</span>
+          <h3 class="timeline__title">Senior Python Developer</h3>
+          <p class="timeline__company">Company Name</p>
+          <p class="timeline__description">
+            Leading automation initiatives and developing AI-powered solutions
+            to streamline business processes and improve efficiency.
+          </p>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2022 - 2024</span>
+          <h3 class="timeline__title">Python Developer</h3>
+          <p class="timeline__company">Previous Company</p>
+          <p class="timeline__description">
+            Developed and maintained automation scripts, built data pipelines,
+            and integrated third-party APIs for various business applications.
+          </p>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2020 - 2022</span>
+          <h3 class="timeline__title">Junior Developer</h3>
+          <p class="timeline__company">First Company</p>
+          <p class="timeline__description">
+            Started my journey in professional software development, learning
+            best practices and contributing to team projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">Testimonials</h2>
+        <p class="section__subtitle">What others say about working with me</p>
+      </div>
+
+      <div class="testimonials__grid">
+        <!-- Testimonial 1 -->
+        <div class="card testimonial-card fade-in">
+          <div class="testimonial-card__avatar">👤</div>
+          <p class="testimonial-card__quote">
+            Kai delivered exceptional work on our automation project. His code was
+            clean, well-documented, and exceeded our expectations.
+          </p>
+          <h4 class="testimonial-card__name">John Doe</h4>
+          <p class="testimonial-card__role">Project Manager at TechCorp</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="card testimonial-card fade-in">
+          <div class="testimonial-card__avatar">👤</div>
+          <p class="testimonial-card__quote">
+            Working with Kai was a pleasure. He understood our requirements quickly
+            and delivered a solution that saved us countless hours.
+          </p>
+          <h4 class="testimonial-card__name">Jane Smith</h4>
+          <p class="testimonial-card__role">CTO at StartupXYZ</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="card testimonial-card fade-in">
+          <div class="testimonial-card__avatar">👤</div>
+          <p class="testimonial-card__quote">
+            Highly recommend Kai for any Python development work. Professional,
+            responsive, and technically excellent.
+          </p>
+          <h4 class="testimonial-card__name">Alex Johnson</h4>
+          <p class="testimonial-card__role">Founder at AutomateNow</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electronics Search Section -->
+  <section class="section electronics" id="electronics">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">🔌 Electronics Knowledge Base</h2>
+        <p class="section__subtitle">A curated collection of electronics knowledge • Search components, protocols,
+          tools, and more</p>
+      </div>
+
+      <div class="electronics__search-container fade-in">
+        <div class="electronics__search-box">
+          <svg class="electronics__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="text" class="electronics__search-input" id="electronicsSearch"
+            placeholder="Search: Arduino, I2C, oscilloscope, resistor..." autocomplete="off">
+        </div>
+      </div>
+
+      <div class="electronics__results" id="electronicsResults">
+        <!-- Results populated by JavaScript -->
+      </div>
+
+      <div class="electronics__no-results" id="noResults" style="display: none;">
+        <p>No results found. Try a different search term.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="section blog" id="blog">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">Blog</h2>
+        <p class="section__subtitle">Thoughts, tutorials, and insights</p>
+      </div>
+
+      <div class="blog__grid">
+        <!-- Blog Post 1 -->
+        <div class="card blog-card fade-in">
+          <div class="blog-card__image"></div>
+          <div class="blog-card__meta">
+            <span>Jan 15, 2026</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="blog-card__title">Automating Your Workflow with Python</h3>
+          <p class="blog-card__excerpt">
+            Learn how to identify automation opportunities and build efficient
+            Python scripts to reclaim your time.
+          </p>
+          <div class="blog-card__tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Automation</span>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="card blog-card fade-in">
+          <div class="blog-card__image"></div>
+          <div class="blog-card__meta">
+            <span>Dec 20, 2025</span>
+            <span>•</span>
+            <span>8 min read</span>
+          </div>
+          <h3 class="blog-card__title">Getting Started with ESP32 and MicroPython</h3>
+          <p class="blog-card__excerpt">
+            A beginner's guide to programming the ESP32 microcontroller using
+            MicroPython for IoT projects.
+          </p>
+          <div class="blog-card__tags">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">MicroPython</span>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="card blog-card fade-in">
+          <div class="blog-card__image"></div>
+          <div class="blog-card__meta">
+            <span>Nov 10, 2025</span>
+            <span>•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="blog-card__title">Integrating AI into Your Python Projects</h3>
+          <p class="blog-card__excerpt">
+            Practical tips for adding AI capabilities to your applications
+            using modern APIs and libraries.
+          </p>
+          <div class="blog-card__tags">
+            <span class="tech-tag">AI</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__title">Get in Touch</h2>
+        <p class="section__subtitle">Let's build something great together</p>
+      </div>
+
+      <div class="contact__content fade-in">
+        <div class="contact__info">
+          <h3>Let's Connect</h3>
+          <p>
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of something great.
+          </p>
+
+          <div class="contact__methods">
+            <div class="contact__method">
+              <div class="contact__method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="contact__method-label">Email</span>
+                <p class="contact__method-value">kylesantos0411@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact__method">
+              <div class="contact__method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact__method-label">GitHub</span>
+                <p class="contact__method-value">github.com/kylesantos0411</p>
+              </div>
+            </div>
+
+            <div class="contact__method">
+              <div class="contact__method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact__method-label">LinkedIn</span>
+                <p class="contact__method-value">linkedin.com/in/santos-kyle-a-14287b349</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form">
+          <form id="contactForm">
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label>
+              <input type="text" class="form__input" id="name" name="name" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email</label>
+              <input type="email" class="form__input" id="email" name="email" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="subject">Subject</label>
+              <input type="text" class="form__input" id="subject" name="subject" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Message</label>
+              <textarea class="form__textarea" id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%;">
+              Send Message
+            </button>
+            <div class="form__status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p class="footer__text">
+        &copy; 2026 Kai. Crafted with ☕ and Python.
+      </p>
+      <div class="footer__links">
+        <a href="#hero" class="footer__link">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>

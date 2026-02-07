@@ -1,0 +1,426 @@
+{
+  "items": [
+    {
+      "id": "resistor",
+      "name": "Resistor",
+      "category": "Components",
+      "icon": "⚡",
+      "description": "Passive component that limits current flow. Measured in Ohms (Ω). Uses color bands for value identification.",
+      "keywords": ["resistance", "ohm", "current limiter", "color code", "smd", "through-hole"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Resistor",
+        "tutorial": "https://learn.sparkfun.com/tutorials/resistors"
+      }
+    },
+    {
+      "id": "capacitor",
+      "name": "Capacitor",
+      "category": "Components",
+      "icon": "🔋",
+      "description": "Stores electrical energy in an electric field. Types include ceramic, electrolytic, and tantalum.",
+      "keywords": ["capacitance", "farad", "filter", "decoupling", "electrolytic", "ceramic"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Capacitor",
+        "tutorial": "https://learn.sparkfun.com/tutorials/capacitors"
+      }
+    },
+    {
+      "id": "transistor",
+      "name": "Transistor",
+      "category": "Components",
+      "icon": "🔀",
+      "description": "Semiconductor device for amplifying or switching electronic signals. Types: BJT, MOSFET, JFET.",
+      "keywords": ["bjt", "mosfet", "amplifier", "switch", "npn", "pnp", "semiconductor"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Transistor",
+        "tutorial": "https://learn.sparkfun.com/tutorials/transistors"
+      }
+    },
+    {
+      "id": "led",
+      "name": "LED",
+      "category": "Components",
+      "icon": "💡",
+      "description": "Light Emitting Diode. Semiconductor that emits light when current flows through. Various colors available.",
+      "keywords": ["light", "diode", "indicator", "rgb", "smd led", "high power"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+        "tutorial": "https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds"
+      }
+    },
+    {
+      "id": "inductor",
+      "name": "Inductor",
+      "category": "Components",
+      "icon": "🌀",
+      "description": "Passive component that stores energy in a magnetic field. Used in filters and power supplies.",
+      "keywords": ["inductance", "henry", "coil", "choke", "filter", "magnetic"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Inductor",
+        "tutorial": "https://learn.sparkfun.com/tutorials/inductors"
+      }
+    },
+    {
+      "id": "op-amp",
+      "name": "Operational Amplifier",
+      "category": "Components",
+      "icon": "📈",
+      "description": "High-gain voltage amplifier with differential input. Used in signal conditioning, filters, and math operations.",
+      "keywords": ["opamp", "amplifier", "741", "comparator", "differential", "gain"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Operational_amplifier",
+        "tutorial": "https://www.electronics-tutorials.ws/opamp/opamp_1.html"
+      }
+    },
+    {
+      "id": "sensor-temp",
+      "name": "Temperature Sensor",
+      "category": "Components",
+      "icon": "🌡️",
+      "description": "Measures temperature. Types include thermistors, thermocouples, and digital sensors like DS18B20.",
+      "keywords": ["thermistor", "thermocouple", "ds18b20", "lm35", "ntc", "ptc"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Temperature_sensor",
+        "tutorial": "https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/"
+      }
+    },
+    {
+      "id": "sensor-ultrasonic",
+      "name": "Ultrasonic Sensor",
+      "category": "Components",
+      "icon": "📡",
+      "description": "Measures distance using ultrasonic sound waves. Popular models: HC-SR04. Range typically 2cm-400cm.",
+      "keywords": ["hc-sr04", "distance", "sonar", "ranging", "obstacle detection"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Ultrasonic_transducer",
+        "tutorial": "https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/"
+      }
+    },
+    {
+      "id": "arduino-uno",
+      "name": "Arduino Uno",
+      "category": "Microcontrollers",
+      "icon": "🎛️",
+      "description": "Popular 8-bit microcontroller board based on ATmega328P. 14 digital I/O, 6 analog inputs. Great for beginners.",
+      "keywords": ["atmega328", "avr", "beginner", "prototyping", "5v", "16mhz"],
+      "links": {
+        "documentation": "https://docs.arduino.cc/hardware/uno-rev3",
+        "datasheet": "https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf",
+        "tutorial": "https://docs.arduino.cc/learn/starting-guide/getting-started-arduino"
+      }
+    },
+    {
+      "id": "arduino-nano",
+      "name": "Arduino Nano",
+      "category": "Microcontrollers",
+      "icon": "🎛️",
+      "description": "Compact version of Arduino Uno. Same ATmega328P chip in a breadboard-friendly form factor.",
+      "keywords": ["atmega328", "compact", "breadboard", "mini", "small"],
+      "links": {
+        "documentation": "https://docs.arduino.cc/hardware/nano",
+        "tutorial": "https://docs.arduino.cc/learn/starting-guide/getting-started-arduino"
+      }
+    },
+    {
+      "id": "esp32",
+      "name": "ESP32",
+      "category": "Microcontrollers",
+      "icon": "📶",
+      "description": "Dual-core 32-bit microcontroller with WiFi and Bluetooth. 240MHz, perfect for IoT projects.",
+      "keywords": ["wifi", "bluetooth", "ble", "iot", "espressif", "dual-core", "240mhz"],
+      "links": {
+        "documentation": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/",
+        "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+        "tutorial": "https://randomnerdtutorials.com/getting-started-with-esp32/"
+      }
+    },
+    {
+      "id": "esp8266",
+      "name": "ESP8266",
+      "category": "Microcontrollers",
+      "icon": "📶",
+      "description": "Low-cost WiFi microcontroller. Single-core 80MHz. Popular for simple IoT and home automation.",
+      "keywords": ["wifi", "iot", "nodemcu", "wemos", "cheap", "80mhz"],
+      "links": {
+        "documentation": "https://www.espressif.com/en/products/socs/esp8266",
+        "tutorial": "https://randomnerdtutorials.com/getting-started-with-esp8266-wifi-transceiver-review/"
+      }
+    },
+    {
+      "id": "raspberry-pi",
+      "name": "Raspberry Pi",
+      "category": "Microcontrollers",
+      "icon": "🍓",
+      "description": "Single-board computer running Linux. Multiple models from Pi Zero to Pi 5. GPIO for hardware projects.",
+      "keywords": ["linux", "sbc", "python", "gpio", "arm", "computer", "broadcom"],
+      "links": {
+        "documentation": "https://www.raspberrypi.com/documentation/",
+        "tutorial": "https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started"
+      }
+    },
+    {
+      "id": "stm32",
+      "name": "STM32",
+      "category": "Microcontrollers",
+      "icon": "⚙️",
+      "description": "ARM Cortex-M based MCU family by STMicroelectronics. Professional-grade, wide range of models.",
+      "keywords": ["arm", "cortex-m", "professional", "industrial", "hal", "cube"],
+      "links": {
+        "documentation": "https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html",
+        "tutorial": "https://deepbluembedded.com/stm32-arm-programming-tutorials/"
+      }
+    },
+    {
+      "id": "attiny85",
+      "name": "ATtiny85",
+      "category": "Microcontrollers",
+      "icon": "🔬",
+      "description": "Tiny 8-bit AVR microcontroller. 8 pins, low power. Perfect for small embedded projects.",
+      "keywords": ["tiny", "8-pin", "avr", "low-power", "digispark", "small"],
+      "links": {
+        "documentation": "https://www.microchip.com/en-us/product/attiny85",
+        "tutorial": "https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide"
+      }
+    },
+    {
+      "id": "teensy",
+      "name": "Teensy",
+      "category": "Microcontrollers",
+      "icon": "🚀",
+      "description": "High-performance ARM-based development board. Fast processing, USB capabilities, audio support.",
+      "keywords": ["arm", "audio", "usb", "high-speed", "pjrc", "cortex-m7"],
+      "links": {
+        "documentation": "https://www.pjrc.com/teensy/",
+        "tutorial": "https://www.pjrc.com/teensy/tutorial.html"
+      }
+    },
+    {
+      "id": "i2c",
+      "name": "I2C Protocol",
+      "category": "Protocols",
+      "icon": "🔗",
+      "description": "Two-wire serial protocol (SDA, SCL). Supports multiple devices on one bus using addresses. Up to 3.4Mbps.",
+      "keywords": ["serial", "bus", "sda", "scl", "address", "two-wire", "iic"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/I%C2%B2C",
+        "tutorial": "https://learn.sparkfun.com/tutorials/i2c"
+      }
+    },
+    {
+      "id": "spi",
+      "name": "SPI Protocol",
+      "category": "Protocols",
+      "icon": "🔗",
+      "description": "Four-wire serial protocol (MOSI, MISO, SCK, CS). High-speed, full-duplex communication.",
+      "keywords": ["serial", "mosi", "miso", "sck", "chip-select", "full-duplex"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Serial_Peripheral_Interface",
+        "tutorial": "https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi"
+      }
+    },
+    {
+      "id": "uart",
+      "name": "UART Protocol",
+      "category": "Protocols",
+      "icon": "🔗",
+      "description": "Asynchronous serial communication (TX, RX). Simple point-to-point. Common baud rates: 9600, 115200.",
+      "keywords": ["serial", "tx", "rx", "baud", "rs232", "asynchronous", "ttl"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter",
+        "tutorial": "https://learn.sparkfun.com/tutorials/serial-communication"
+      }
+    },
+    {
+      "id": "mqtt",
+      "name": "MQTT Protocol",
+      "category": "Protocols",
+      "icon": "📬",
+      "description": "Lightweight publish-subscribe messaging protocol. Perfect for IoT. Topics, QoS levels, retained messages.",
+      "keywords": ["iot", "publish", "subscribe", "broker", "mosquitto", "messaging"],
+      "links": {
+        "documentation": "https://mqtt.org/",
+        "tutorial": "https://randomnerdtutorials.com/what-is-mqtt-and-how-it-works/"
+      }
+    },
+    {
+      "id": "can-bus",
+      "name": "CAN Bus",
+      "category": "Protocols",
+      "icon": "🚗",
+      "description": "Controller Area Network. Robust serial protocol for automotive and industrial applications. Differential signaling.",
+      "keywords": ["automotive", "industrial", "differential", "obd2", "vehicle", "robust"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/CAN_bus",
+        "tutorial": "https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial"
+      }
+    },
+    {
+      "id": "one-wire",
+      "name": "1-Wire Protocol",
+      "category": "Protocols",
+      "icon": "1️⃣",
+      "description": "Single-wire communication protocol by Dallas/Maxim. Used by DS18B20 temperature sensors.",
+      "keywords": ["dallas", "maxim", "single-wire", "ds18b20", "parasite-power"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/1-Wire",
+        "tutorial": "https://learn.adafruit.com/ds18b20-temperature-sensor"
+      }
+    },
+    {
+      "id": "pcb-design",
+      "name": "PCB Design",
+      "category": "Topics",
+      "icon": "📐",
+      "description": "Printed Circuit Board design process. Tools: KiCad, Eagle, Altium. Includes schematic capture and layout.",
+      "keywords": ["kicad", "eagle", "altium", "schematic", "layout", "gerber", "fabrication"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Printed_circuit_board",
+        "tutorial": "https://learn.sparkfun.com/tutorials/pcb-basics"
+      }
+    },
+    {
+      "id": "embedded-systems",
+      "name": "Embedded Systems",
+      "category": "Topics",
+      "icon": "🖥️",
+      "description": "Computer systems integrated into larger devices. Real-time constraints, limited resources, specific tasks.",
+      "keywords": ["firmware", "rtos", "real-time", "bare-metal", "microcontroller"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Embedded_system",
+        "tutorial": "https://www.embedded.com/introduction-to-embedded-systems/"
+      }
+    },
+    {
+      "id": "power-electronics",
+      "name": "Power Electronics",
+      "category": "Topics",
+      "icon": "⚡",
+      "description": "Converting and controlling electrical power. Includes regulators, converters, inverters, and motor drives.",
+      "keywords": ["regulator", "buck", "boost", "smps", "converter", "inverter"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Power_electronics",
+        "tutorial": "https://www.electronics-tutorials.ws/power/power_1.html"
+      }
+    },
+    {
+      "id": "iot",
+      "name": "Internet of Things (IoT)",
+      "category": "Topics",
+      "icon": "🌐",
+      "description": "Connecting physical devices to the internet. Sensors, actuators, cloud platforms, and data analytics.",
+      "keywords": ["connected", "smart", "cloud", "sensors", "wifi", "home-automation"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Internet_of_things",
+        "tutorial": "https://randomnerdtutorials.com/projects-esp32/"
+      }
+    },
+    {
+      "id": "motor-control",
+      "name": "Motor Control",
+      "category": "Topics",
+      "icon": "🔄",
+      "description": "Controlling DC, stepper, and servo motors. H-bridges, PWM, drivers like L298N and A4988.",
+      "keywords": ["dc-motor", "stepper", "servo", "pwm", "h-bridge", "l298n", "a4988"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Motor_controller",
+        "tutorial": "https://learn.adafruit.com/adafruit-motor-selection-guide"
+      }
+    },
+    {
+      "id": "signal-processing",
+      "name": "Signal Processing",
+      "category": "Topics",
+      "icon": "📊",
+      "description": "Analyzing and modifying signals. Filtering, FFT, ADC/DAC, noise reduction techniques.",
+      "keywords": ["filter", "fft", "adc", "dac", "analog", "digital", "dsp"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Signal_processing",
+        "tutorial": "https://www.analog.com/en/education/education-library/tutorials.html"
+      }
+    },
+    {
+      "id": "oscilloscope",
+      "name": "Oscilloscope",
+      "category": "Tools",
+      "icon": "📺",
+      "description": "Visualizes electrical signals over time. Essential for debugging circuits. Digital (DSO) and analog types.",
+      "keywords": ["dso", "scope", "waveform", "debugging", "voltage", "time-domain"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Oscilloscope",
+        "tutorial": "https://learn.sparkfun.com/tutorials/how-to-use-an-oscilloscope"
+      }
+    },
+    {
+      "id": "multimeter",
+      "name": "Multimeter",
+      "category": "Tools",
+      "icon": "🔢",
+      "description": "Measures voltage, current, and resistance. Digital (DMM) preferred. Essential for any electronics work.",
+      "keywords": ["dmm", "voltage", "current", "resistance", "continuity", "measurement"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Multimeter",
+        "tutorial": "https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter"
+      }
+    },
+    {
+      "id": "logic-analyzer",
+      "name": "Logic Analyzer",
+      "category": "Tools",
+      "icon": "📈",
+      "description": "Captures and displays digital signals. Multiple channels. Protocol decoding for I2C, SPI, UART, etc.",
+      "keywords": ["digital", "protocol", "saleae", "decoder", "timing", "debug"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Logic_analyzer",
+        "tutorial": "https://learn.sparkfun.com/tutorials/using-a-logic-analyzer"
+      }
+    },
+    {
+      "id": "soldering-iron",
+      "name": "Soldering Station",
+      "category": "Tools",
+      "icon": "🔥",
+      "description": "Temperature-controlled soldering tool. Essential for PCB assembly. Tips for different applications.",
+      "keywords": ["solder", "iron", "station", "hakko", "weller", "flux", "assembly"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Soldering_iron",
+        "tutorial": "https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering"
+      }
+    },
+    {
+      "id": "power-supply",
+      "name": "Bench Power Supply",
+      "category": "Tools",
+      "icon": "🔌",
+      "description": "Adjustable voltage and current source. Current limiting protects circuits. Multiple outputs common.",
+      "keywords": ["voltage", "current", "adjustable", "lab", "bench", "dc-supply"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Power_supply",
+        "tutorial": "https://learn.sparkfun.com/tutorials/how-to-use-a-bench-power-supply"
+      }
+    },
+    {
+      "id": "function-generator",
+      "name": "Function Generator",
+      "category": "Tools",
+      "icon": "〰️",
+      "description": "Generates waveforms: sine, square, triangle, sawtooth. Variable frequency and amplitude. For testing circuits.",
+      "keywords": ["waveform", "sine", "square", "signal", "frequency", "test"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/Function_generator",
+        "tutorial": "https://www.tek.com/en/documents/primer/function-generator-fundamentals"
+      }
+    },
+    {
+      "id": "3d-printer",
+      "name": "3D Printer",
+      "category": "Tools",
+      "icon": "🖨️",
+      "description": "Creates physical enclosures and parts. FDM common for prototyping. CAD design with Fusion 360, TinkerCAD.",
+      "keywords": ["fdm", "enclosure", "prototype", "cad", "pla", "abs", "fusion360"],
+      "links": {
+        "documentation": "https://en.wikipedia.org/wiki/3D_printing",
+        "tutorial": "https://all3dp.com/2/3d-printing-for-beginners-all-you-need-to-know-to-get-started/"
+      }
+    }
+  ]
+}
