@@ -1,142 +1,115 @@
-# Kai's Portfolio Website
+# Kyle Santos Portfolio
 
-A modern, minimal portfolio for a Python developer featuring a unique electronics knowledge search engine, dark/light mode, and professional aesthetics.
+Resume-ready portfolio site for an electronics engineer and software builder.
 
-## 🚀 Quick Start
+## Overview
 
-1. Open `index.html` in your browser
-2. Or use a local server:
-   ```bash
-   # Python
-   python -m http.server 8000
-   
-   # Node.js
-   npx serve
-   ```
+This version of the site is designed to:
 
-## 📁 Project Structure
+- follow the resume and portfolio flow from `document (1).md`
+- position Kyle as an embedded systems and AI computer vision candidate
+- present MICROTECT as the flagship capstone case study
+- organize each project by problem, solution, architecture, hardware, logic, results, and fixes
+- present a research-paper case study with 3D design and prototype evidence slots
+- organize project-based experience and skill groups in a resume-friendly format
+- keep project content maintainable through structured data
+- stay lightweight as a static site
 
-```
+## Project Structure
+
+```text
 PORTFOLIO/
-├── index.html            # Main HTML file
-├── css/
-│   └── styles.css        # Complete design system & styles
-├── js/
-│   ├── main.js           # Core functionality
-│   ├── search.js         # Electronics search engine
-│   └── contact.js        # EmailJS contact form
-├── data/
-│   └── electronics.json  # Curated electronics knowledge base
-├── assets/
-│   ├── resume.pdf        # Your resume (add your own)
-│   └── images/           # Project screenshots
-└── README.md
+|-- index.html
+|-- resume.html
+|-- css/
+|   |-- resume.css
+|   `-- styles.css
+|-- assets/
+|   |-- images/
+|   |   `-- microtect/
+|   `-- papers/
+|       |-- kyle-santos-resume.pdf
+|       `-- microtect-final-paper.pdf
+|-- data/
+|   |-- electronics.json
+|   `-- projects.json
+|-- js/
+|   |-- main.js
+|   |-- project-data.mjs
+|   |-- projects.mjs
+|   `-- search.js
+|-- tests/
+|   `-- project-data.test.mjs
+`-- README.md
 ```
 
-## ✏️ Customization Guide
+## Local Preview
 
-### Personal Information
-Edit `index.html`:
-- Line 10: Update meta description
-- Line 14: Update title/tagline
-- Social links in hero section (search for `github.com/`, `linkedin.com/`, `your.email@gmail.com`)
-- Contact section email and links
+Open `index.html` directly, or run a local server:
+
+```bash
+py -m http.server 8000
+```
+
+Then open `http://localhost:8000`.
+
+## Update Content
 
 ### Projects
-Find the `projects` section in `index.html` and update:
-- Project titles
-- Descriptions
-- Tech tags
-- Links (GitHub, live demo)
-- Add project screenshots to `assets/images/`
 
-### Experience
-Update the timeline items in the `experience` section with your work history.
+Edit `data/projects.json` to update:
 
-### Testimonials
-Replace placeholder testimonials with real ones.
+- project names
+- summaries and impact statements
+- problem, solution, architecture, hardware, software logic, results, and challenges
+- tech stacks
+- featured status
+- GitHub links
 
-### Blog
-Add links to your actual blog posts or keep as placeholders.
+### Personal Details
 
-## 📧 Contact Form Setup (EmailJS)
+Edit `index.html` and `resume.html` for:
 
-1. Create a free account at [emailjs.com](https://www.emailjs.com/)
-2. Add an email service (Gmail, Outlook, etc.)
-3. Create an email template with these variables:
-   - `{{from_name}}`
-   - `{{from_email}}`
-   - `{{subject}}`
-   - `{{message}}`
-4. Edit `js/contact.js` and replace:
-   ```javascript
-   const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-   const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-   const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-   ```
-5. Add EmailJS script to `index.html` before other scripts:
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   ```
+- hero/profile copy
+- research paper, prototype, experience, skills, and resume snapshot content
+- email address
+- education details
+- phone number
+- GitHub link
+- LinkedIn link
 
-## 📊 Google Analytics Setup
+### Resume PDF
 
-1. Create a GA4 property at [analytics.google.com](https://analytics.google.com/)
-2. Get your Measurement ID (starts with `G-`)
-3. Replace `G-XXXXXXXXXX` in `index.html` (lines 24-25)
+Open `resume.html`, then use the `Print or Save PDF` button. The resume is designed
+as two print pages. The generated PDF used by the portfolio buttons is stored at
+`assets/papers/kyle-santos-resume.pdf`.
 
-## 🔌 Electronics Knowledge Base
+### MICROTECT Assets
 
-The search engine pulls from `data/electronics.json`. To add new items:
+The MICROTECT paper and visuals are stored in:
 
-```json
-{
-  "id": "unique-id",
-  "name": "Display Name",
-  "category": "Components|Microcontrollers|Protocols|Topics|Tools",
-  "icon": "🔧",
-  "description": "Brief description of the item",
-  "keywords": ["search", "terms", "here"],
-  "links": {
-    "documentation": "https://...",
-    "datasheet": "https://...",
-    "tutorial": "https://..."
-  }
-}
+- `assets/papers/microtect-final-paper.pdf`
+- `assets/papers/kyle-santos-resume.pdf`
+- `assets/images/microtect/microtect-3d-render-transparent.png`
+- `assets/images/microtect/microtect-detection-ui.png`
+- `assets/images/microtect/microtect-3d-perspective.jpg`
+- `assets/images/microtect/microtect-3d-front.jpg`
+- `assets/images/microtect/microtect-3d-cutaway.jpg`
+
+### Electronics Lab
+
+Edit `data/electronics.json` to expand the searchable electronics reference.
+
+## Tests
+
+Run the project-data checks with:
+
+```bash
+node tests/project-data.test.mjs
 ```
 
-## 🚢 Deploy to Vercel
+## Notes
 
-1. Push to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/portfolio.git
-   git push -u origin main
-   ```
-
-2. Deploy on Vercel:
-   - Go to [vercel.com](https://vercel.com/)
-   - Import your GitHub repository
-   - Deploy (no configuration needed for static sites)
-
-## 📱 Features
-
-- ✅ Dark/Light mode toggle
-- ✅ Responsive design (mobile + desktop)
-- ✅ Typing animation
-- ✅ Smooth scroll animations
-- ✅ Electronics knowledge search engine
-- ✅ Contact form (EmailJS ready)
-- ✅ Google Analytics ready
-- ✅ SEO optimized
-
-## 📄 License
-
-MIT License - feel free to use and modify!
-
----
-
-Made with ☕ and Python vibes.
+- The project cards are rendered from `data/projects.json` by `js/projects.mjs`.
+- The electronics search is powered by `data/electronics.json` and `js/search.js`.
+- The portfolio resume buttons open `assets/papers/kyle-santos-resume.pdf`, generated from `resume.html`.

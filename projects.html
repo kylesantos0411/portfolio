@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Project screen for Kyle Santos, featuring embedded systems, AI computer vision, automation, robotics, and software product work."
+  >
+  <title>Kyle Santos | Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="projects-page">
+  <div class="site-shell">
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <nav class="nav" id="navbar">
+      <div class="container nav__container">
+        <a href="index.html" class="nav__logo" aria-label="Kyle Santos home">
+          <span class="nav__mark">KS</span>
+          <span class="nav__wordmark">Kyle Santos</span>
+        </a>
+
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html#about" class="nav__link">About</a></li>
+          <li><a href="#projects" class="nav__link active">Projects</a></li>
+          <li><a href="index.html#experience" class="nav__link">Experience</a></li>
+          <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+          <li><a href="index.html#resume" class="nav__link">Resume</a></li>
+          <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v2.25M12 18.75V21M4.22 4.22l1.6 1.6M18.18 18.18l1.6 1.6M3 12h2.25M18.75 12H21M4.22 19.78l1.6-1.6M18.18 5.82l1.6-1.6M12 16.25a4.25 4.25 0 1 0 0-8.5 4.25 4.25 0 0 0 0 8.5Z"/>
+            </svg>
+            <svg class="moon-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12.8A8.8 8.8 0 1 1 11.2 3a7 7 0 1 0 9.8 9.8Z"/>
+            </svg>
+          </button>
+
+          <a href="index.html" class="btn btn--ghost">Back Home</a>
+
+          <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="section projects projects-screen" id="projects">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Engineering projects</p>
+            <h1 class="section__title">Projects at a glance.</h1>
+            <p class="section__copy">
+              Search, filter, and open each build to review the problem, system design, hardware,
+              software logic, results, and fixes.
+            </p>
+          </div>
+
+          <div class="projects__toolbar fade-in">
+            <div class="projects__search">
+              <label class="sr-only" for="projectSearch">Search projects</label>
+              <input
+                type="search"
+                id="projectSearch"
+                class="projects__search-input"
+                placeholder="Search by stack, sensor, project, result, or problem"
+                autocomplete="off"
+              >
+            </div>
+
+            <div class="projects__filters" id="projectFilters" aria-label="Project filters"></div>
+          </div>
+
+          <p class="projects__meta fade-in" id="projectMeta">Loading projects...</p>
+
+          <div class="projects__grid" id="projectsGrid"></div>
+
+          <div class="empty-state" id="projectsEmpty" hidden>
+            <h2>No projects matched that filter.</h2>
+            <p>Try a broader search term or switch back to the full project list.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p><span id="currentYear">2026</span> Kyle Santos. Projects documented around practical engineering evidence.</p>
+        <a href="#top" class="footer__link">Back to top</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="js/projects.mjs"></script>
+</body>
+</html>

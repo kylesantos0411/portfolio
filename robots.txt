@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kylesantos0411.github.io/portfolio/sitemap.xml

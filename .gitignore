@@ -11,3 +11,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Agent files (AI assistant configs - not for public repo)
+.agent/

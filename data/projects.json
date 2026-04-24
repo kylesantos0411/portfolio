@@ -1,0 +1,313 @@
+{
+  "projects": [
+    {
+      "name": "MICROTECT",
+      "repo": "kylesantos0411/MICROTECT",
+      "year": 2026,
+      "priority": 1,
+      "updated": "Capstone project",
+      "category": "Capstone Research",
+      "status": "AI hardware prototype",
+      "featured": true,
+      "summary": "An automated optical detection system for identifying microplastics in rock salt using computer vision and an embedded Raspberry Pi workflow.",
+      "impact": "Positions the portfolio around real engineering systems that integrate AI, physical hardware, environmental monitoring, and operator-facing software.",
+      "role": "Capstone team leader, full-system developer, frontend UI/UX, backend processing logic, AI workflow, and hardware integration",
+      "tech": [
+        "Python",
+        "OpenCV",
+        "YOLOv11",
+        "Raspberry Pi 5",
+        "HQ Camera Module",
+        "UV/white LED control",
+        "Roboflow"
+      ],
+      "highlights": [
+        "Detected and quantified microplastic particles using YOLOv11 and optical imaging",
+        "Integrated Raspberry Pi 5, camera module, lighting control, and real-time UI",
+        "Developed the full operator workflow from image capture and detection to frontend UI, graph views, and reports"
+      ],
+      "details": {
+        "problem": "Manual microscopy for microplastic inspection is slow, inconsistent, and difficult to repeat across multiple rock salt samples.",
+        "solution": "Build a compact AI-assisted inspection system that captures sample images, detects particles, visualizes findings, and supports report generation.",
+        "architecture": "Sample tray and optical capture setup -> Raspberry Pi 5 image processing -> backend detection and measurement logic -> YOLOv11 result handling -> touchscreen frontend UI -> report and graph outputs.",
+        "hardware": [
+          "Raspberry Pi 5",
+          "HQ camera module",
+          "LED lamp/ring light",
+          "7-inch LCD monitor",
+          "Acrylic/wooden prototype enclosure",
+          "sampling containers and Petri dishes"
+        ],
+        "software": "YOLOv11 detection pipeline with annotated training data, OpenCV image handling, backend processing logic, bounding-box identification, pixel-to-micrometer conversion, frontend result UI, UX flow, real-time feedback, graph views, and report generation.",
+        "results": [
+          "Conducted multi-trial testing across different sample sources",
+          "Computed mean detection consistency of 69.71% based on microplastic count",
+          "Model performance: precision 0.826, recall 0.733, and mAP@50 of 0.814",
+          "Reduced dependence on fully manual visual inspection"
+        ],
+        "challenges": [
+          "Improved optical detection through controlled imaging and illumination",
+          "Handled varied particle appearance through dataset annotation and model evaluation",
+          "Designed the UI/UX around fast inspection, visualization, result reading, and documentation"
+        ]
+      },
+      "posterEyebrow": "Featured capstone",
+      "posterNote": "AI detection | Raspberry Pi | environmental monitoring",
+      "kind": "vision",
+      "links": {
+        "github": "https://github.com/kylesantos0411/MICROTECT",
+        "notes": "assets/papers/microtect-final-paper.pdf"
+      }
+    },
+    {
+      "name": "ESP32-Based Remote Monitoring System",
+      "repo": "",
+      "year": 2026,
+      "priority": 20,
+      "updated": "Engineering build",
+      "category": "Embedded Systems",
+      "status": "Sensor monitoring build",
+      "featured": false,
+      "summary": "A real-time environmental monitoring system that combines motion, temperature, and smoke sensing with LCD-based feedback.",
+      "impact": "Shows embedded systems fundamentals: sensor integration, modular validation, and practical monitoring logic.",
+      "role": "Sensor integration, firmware logic, component testing",
+      "tech": [
+        "ESP32",
+        "Arduino C/C++",
+        "LCD display",
+        "Motion sensor",
+        "Temperature sensor",
+        "Smoke sensor"
+      ],
+      "highlights": [
+        "Integrated multiple sensors into one monitoring workflow",
+        "Displayed environmental readings through an LCD interface",
+        "Built and validated each sensor module before system integration"
+      ],
+      "details": {
+        "problem": "Small environments need low-cost monitoring for motion, temperature changes, and smoke conditions without relying on a full commercial system.",
+        "solution": "Use an ESP32-based controller to collect sensor readings, process environmental states, and present live status through a local display.",
+        "architecture": "Sensor inputs -> ESP32 firmware -> threshold and status logic -> LCD output and alert-ready state.",
+        "hardware": [
+          "ESP32",
+          "motion sensor",
+          "temperature sensor",
+          "smoke sensor",
+          "LCD module",
+          "breadboard wiring"
+        ],
+        "software": "Arduino-style firmware with modular sensor reads, threshold checks, serial debugging, and LCD status updates.",
+        "results": [
+          "Produced real-time display feedback from multiple sensors",
+          "Validated each sensor component independently before combined testing"
+        ],
+        "challenges": [
+          "Separated component tests to isolate wiring and reading issues",
+          "Kept firmware modular so each sensor could be debugged without breaking the full system"
+        ]
+      },
+      "posterEyebrow": "Remote monitoring",
+      "posterNote": "ESP32 | sensors | LCD feedback",
+      "kind": "embedded",
+      "links": {}
+    },
+    {
+      "name": "Smart Pet Feeder System",
+      "repo": "",
+      "year": 2026,
+      "priority": 30,
+      "updated": "Automation prototype",
+      "category": "Automation",
+      "status": "Mechatronics build",
+      "featured": false,
+      "summary": "An automated feeding prototype using ultrasonic and LDR sensing, servo-controlled dispensing, buzzer alerts, and OLED status feedback.",
+      "impact": "Demonstrates practical automation with sensing, actuation, feedback, and user-visible system state.",
+      "role": "Hardware logic, sensor-actuator integration, prototype feedback flow",
+      "tech": [
+        "Arduino",
+        "Ultrasonic sensor",
+        "LDR sensor",
+        "Servo motor",
+        "Buzzer",
+        "OLED display"
+      ],
+      "highlights": [
+        "Used ultrasonic and light sensing to support feeding decisions",
+        "Controlled servo motors for dispensing actions",
+        "Added buzzer and OLED feedback for user awareness"
+      ],
+      "details": {
+        "problem": "Pet feeding can be inconsistent when owners are busy or away, especially without a simple way to see system status.",
+        "solution": "Create a sensor-assisted feeder that controls dispensing, reports status, and alerts users during operation.",
+        "architecture": "Sensors -> microcontroller decision logic -> servo dispensing -> buzzer and OLED feedback.",
+        "hardware": [
+          "Arduino-compatible controller",
+          "ultrasonic sensor",
+          "LDR sensor",
+          "servo motor",
+          "buzzer",
+          "OLED display"
+        ],
+        "software": "Control logic for sensor readings, dispensing timing, servo movement, notification states, and OLED status messages.",
+        "results": [
+          "Built an automated dispensing flow with clear local feedback",
+          "Combined sensing and actuation in a complete physical prototype"
+        ],
+        "challenges": [
+          "Coordinated timing between sensor reads, servo movement, and feedback",
+          "Used display and buzzer states to make the device easier to understand during testing"
+        ]
+      },
+      "posterEyebrow": "Smart automation",
+      "posterNote": "Sensors | servo control | OLED status",
+      "kind": "automation",
+      "links": {}
+    },
+    {
+      "name": "HerCare",
+      "repo": "kylesantos0411/HerCare",
+      "year": 2026,
+      "priority": 2,
+      "updated": "Personal software project",
+      "category": "Software Product",
+      "status": "Android-ready app",
+      "featured": true,
+      "summary": "A care-focused companion app built for routine support, focus sessions, wellness tracking, and partner check-ins.",
+      "impact": "Shows product thinking, empathy in software design, frontend implementation, and the ability to turn a personal idea into a usable app.",
+      "role": "Product concept, frontend development, mobile UX, Android packaging",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Capacitor Android",
+        "Firebase",
+        "AI-assisted development"
+      ],
+      "highlights": [
+        "Designed around daily care routines, focus support, and simple wellness tracking",
+        "Built a clean mobile interface with reusable frontend components",
+        "Prepared the app for Android delivery using Capacitor"
+      ],
+      "details": {
+        "problem": "Busy school and life routines can make it hard for someone to track care habits, focus sessions, and small daily reminders in one gentle place.",
+        "solution": "Build a personal care companion app that organizes routines, wellness notes, focus tools, and partner-aware check-ins into a calm mobile experience.",
+        "architecture": "React frontend -> local/product state -> Firebase-backed sharing features -> Capacitor Android package.",
+        "hardware": [],
+        "software": "React and TypeScript interface built with Vite, packaged through Capacitor for Android, with Firebase used for app data and sharing-related flows.",
+        "results": [
+          "Created a working care-focused mobile product",
+          "Practiced user-centered design through a real personal use case",
+          "Built experience with frontend architecture, state handling, and Android packaging"
+        ],
+        "challenges": [
+          "Kept the interface calm and simple instead of overloading it with features",
+          "Balanced emotional/personal context with practical app structure",
+          "Used AI-assisted coding and documentation support while checking implementation details"
+        ]
+      },
+      "posterEyebrow": "Personal app",
+      "posterNote": "Care routines | focus support | Android",
+      "kind": "care",
+      "links": {
+        "github": "https://github.com/kylesantos0411/HerCare"
+      }
+    },
+    {
+      "name": "Autonomous Line-Following and Maze-Solving Robot",
+      "repo": "",
+      "year": 2026,
+      "updated": "Robotics build",
+      "category": "Robotics",
+      "status": "Autonomous navigation",
+      "featured": false,
+      "summary": "A robot that follows lines, solves mazes with rule-based navigation, and supports Bluetooth manual override through MIT App Inventor.",
+      "impact": "Shows autonomous control logic, sensor-based navigation, and the ability to blend manual and automatic operation.",
+      "role": "Navigation logic, sensor integration, Bluetooth control flow",
+      "tech": [
+        "Arduino",
+        "IR sensors",
+        "Ultrasonic sensor",
+        "Bluetooth module",
+        "MIT App Inventor",
+        "Motor control"
+      ],
+      "highlights": [
+        "Implemented left-hand and right-hand rule algorithms",
+        "Used IR and ultrasonic sensors for path and obstacle awareness",
+        "Added Bluetooth control for manual override"
+      ],
+      "details": {
+        "problem": "Autonomous robots need reliable path detection and simple recovery options when maze conditions change.",
+        "solution": "Build a navigation robot that can follow lines, solve maze paths with rule-based algorithms, and accept manual override through Bluetooth.",
+        "architecture": "IR and ultrasonic sensing -> navigation algorithm -> motor control -> Bluetooth manual override path.",
+        "hardware": [
+          "IR sensors",
+          "ultrasonic sensor",
+          "motor driver",
+          "Bluetooth module",
+          "robot chassis"
+        ],
+        "software": "Line-following logic, left-hand and right-hand maze rules, obstacle response, motor direction control, and MIT App Inventor command handling.",
+        "results": [
+          "Demonstrated autonomous navigation behavior",
+          "Supported manual control when override was needed"
+        ],
+        "challenges": [
+          "Balanced sensor thresholds for reliable line detection",
+          "Added Bluetooth override to recover from edge cases during testing"
+        ]
+      },
+      "posterEyebrow": "Robotics",
+      "posterNote": "Maze solving | Bluetooth override | motor control",
+      "kind": "robotics",
+      "links": {}
+    },
+    {
+      "name": "VLAN Network Configuration",
+      "repo": "",
+      "year": 2026,
+      "updated": "Network simulation",
+      "category": "Computer Networks",
+      "status": "Cisco Packet Tracer",
+      "featured": false,
+      "summary": "A Packet Tracer network configuration project using VLAN segmentation and routing for structured inter-VLAN communication.",
+      "impact": "Adds networking fundamentals to the portfolio and shows system-level thinking beyond embedded hardware.",
+      "role": "Network design, VLAN configuration, routing validation",
+      "tech": [
+        "Cisco Packet Tracer",
+        "VLANs",
+        "Routing",
+        "Switch configuration",
+        "Network segmentation"
+      ],
+      "highlights": [
+        "Designed a multi-VLAN network for traffic segmentation",
+        "Configured routing for communication between VLANs",
+        "Validated connectivity in Cisco Packet Tracer"
+      ],
+      "details": {
+        "problem": "Flat networks can become harder to manage and less secure when all devices share the same traffic domain.",
+        "solution": "Segment the network into VLANs and configure routing so groups stay organized while still communicating when needed.",
+        "architecture": "End devices -> access switches -> VLAN segmentation -> router or Layer 3 routing -> validated inter-VLAN traffic.",
+        "hardware": [
+          "simulated switches",
+          "simulated router",
+          "end devices in Packet Tracer"
+        ],
+        "software": "Cisco Packet Tracer configuration with VLAN assignments, switch ports, routing setup, and connectivity tests.",
+        "results": [
+          "Created segmented traffic groups",
+          "Verified communication paths between configured VLANs"
+        ],
+        "challenges": [
+          "Checked port assignments and routing paths during validation",
+          "Used simulation testing to confirm the network behaved as designed"
+        ]
+      },
+      "posterEyebrow": "Networking",
+      "posterNote": "VLANs | routing | simulation",
+      "kind": "networking",
+      "links": {}
+    }
+  ]
+}

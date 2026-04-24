@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Two-page resume for Kyle Santos, Electronics Engineering graduate focused on embedded systems and AI computer vision."
+  >
+  <title>Kyle Santos | Resume</title>
+  <link rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+  <div class="resume-actions" aria-label="Resume actions">
+    <a href="index.html">Back to Portfolio</a>
+    <button type="button" id="printResume">Print or Save PDF</button>
+  </div>
+
+  <main class="resume-book" aria-label="Kyle Santos two-page resume">
+    <section class="resume-page">
+      <header class="resume-header">
+        <div>
+          <h1>Kyle Santos</h1>
+          <p>Embedded Systems and AI Computer Vision Engineer</p>
+        </div>
+
+        <address>
+          Quezon City, Philippines<br>
+          <a href="mailto:kylesantos0411@gmail.com">kylesantos0411@gmail.com</a> |
+          <a href="tel:+639194850794">0919 485 0794</a><br>
+          GitHub:
+          <a href="https://github.com/kylesantos0411">github.com/kylesantos0411</a> |
+          Portfolio: <a href="index.html">Portfolio site</a>
+        </address>
+      </header>
+
+      <section class="resume-section">
+        <h2>Professional Summary</h2>
+        <p>
+          Electronics Engineering graduate specializing in embedded systems and AI-based computer
+          vision. Experienced in designing and integrating hardware-software systems using ESP32,
+          Arduino, and Raspberry Pi, with applied knowledge in YOLO-based object detection.
+          Developed real-world engineering solutions focused on automation and environmental
+          monitoring, including an AI-powered microplastic detection system for retail and domestic
+          rock salt screening. Comfortable working across circuit design, sensors, camera-based
+          inspection, prototype testing, user interfaces, and technical documentation.
+        </p>
+      </section>
+
+      <section class="resume-section">
+        <h2>Education</h2>
+        <div class="resume-item compact">
+          <div class="item-heading">
+            <h3>Bachelor of Science in Electronics Engineering</h3>
+            <span>Graduated</span>
+          </div>
+          <p>Marikina Polytechnic College</p>
+          <p><strong>Capstone:</strong> Development of an Automated Optical Detector for Microplastics in Rock Salt for Retail and Domestic Use</p>
+          <p><strong>Relevant Coursework:</strong> Embedded Systems, Digital Electronics, Computer Networks, Signal Processing, Electronics Design</p>
+        </div>
+      </section>
+
+      <section class="resume-section">
+        <h2>Technical Skills</h2>
+        <div class="skill-grid skill-grid--two">
+          <p><strong>Programming:</strong> Python, OpenCV, YOLOv11, C/C++, Arduino/ESP32 firmware logic</p>
+          <p><strong>Embedded Systems:</strong> ESP32, Arduino UNO, Raspberry Pi 5, GPIO, sensor integration, motor control</p>
+          <p><strong>Computer Vision and AI:</strong> object detection, dataset annotation, model training, validation metrics, detection UI</p>
+          <p><strong>Coding Platforms and AI Workflow:</strong> VS Code, Antigravity coding platform, ChatGPT, Claude, prompt-guided debugging, documentation, code review, workflow planning</p>
+          <p><strong>API and Data Handling:</strong> API concepts, JSON, HTTP requests, reading documentation, integrating AI/API-backed features</p>
+          <p><strong>Electronics and Hardware:</strong> circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control</p>
+          <p><strong>Interfaces and Output:</strong> LCD/OLED displays, touchscreen workflows, report generation, graph and analysis views</p>
+          <p><strong>Tools and Simulation:</strong> VS Code, Arduino IDE, Wokwi, Tinkercad, Cisco Packet Tracer, EasyEDA, Canva</p>
+        </div>
+      </section>
+
+      <section class="resume-section">
+        <h2>Engineering Project Experience</h2>
+        <article class="resume-item">
+          <div class="item-heading">
+            <h3>Capstone Team Leader and Full-System Developer | MICROTECT Automated Optical Detector</h3>
+            <span>Team Leader | April 2026</span>
+          </div>
+          <p>
+            Developed an AI-integrated optical detection system for identifying, classifying, and
+            quantifying microplastic particles in rock salt for retail and domestic use. The project
+            addressed the time, cost, and repeatability limitations of manual microscopy by combining
+            optical imaging, embedded processing, AI-assisted analysis, frontend result UI, backend
+            processing logic, UI/UX flow, and report generation.
+          </p>
+          <ul>
+            <li>Integrated Raspberry Pi 5, HQ camera module, illumination system, display interface, and prototype enclosure.</li>
+            <li>Implemented a YOLOv11 object detection workflow with OpenCV image handling and result visualization.</li>
+            <li>Developed the operator-facing interface and workflow from sample capture to result review, graph views, and report output.</li>
+            <li>Generated analytical outputs including particle count, estimated particle size, MP/g, confidence, and contamination level.</li>
+            <li>Used ADDIE methodology and ISO/IEC 25010 evaluation criteria for development and assessment.</li>
+            <li>Reported 69.71% mean detection consistency, with precision 0.826, recall 0.733, and mAP@50 of 0.814.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section split">
+        <div>
+          <h2>MICROTECT Hardware Scope</h2>
+          <ul>
+            <li>Raspberry Pi 5 processing unit with 64GB SD storage and Pi power supply.</li>
+            <li>HQ camera module, camera stand, LED lamp/ring light, and sample viewing area.</li>
+            <li>7-inch LCD monitor, sampling containers, Petri dishes, labels, and enclosed prototype body.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>MICROTECT Software Scope</h2>
+          <ul>
+            <li>Image capture and preprocessing for sample inspection.</li>
+            <li>Bounding-box detection with pixel-to-micrometer size estimation.</li>
+            <li>Detection dashboard with histogram/line analysis and PDF-style reporting flow.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <section class="resume-page">
+      <section class="resume-section">
+        <h2>Additional Engineering Projects</h2>
+
+        <article class="resume-item">
+          <div class="item-heading">
+            <h3>ESP32-Based Remote Monitoring System</h3>
+            <span>Embedded Systems</span>
+          </div>
+          <ul>
+            <li>Built a real-time monitoring system integrating motion, temperature, and smoke sensors.</li>
+            <li>Displayed environmental readings and system status using an LCD interface.</li>
+            <li>Developed modular testing and validation for each sensor component before integration.</li>
+            <li>Practiced threshold-based decision logic for environment status monitoring and debugging.</li>
+          </ul>
+        </article>
+
+        <article class="resume-item">
+          <div class="item-heading">
+            <h3>Smart Pet Feeder System</h3>
+            <span>Automation Prototype</span>
+          </div>
+          <ul>
+            <li>Designed an automated feeding mechanism using ultrasonic and LDR sensors.</li>
+            <li>Controlled servo motors for dispensing and integrated buzzer alerts for notifications.</li>
+            <li>Implemented OLED display feedback for system status and operation visibility.</li>
+            <li>Coordinated sensing, actuation, timing, and user feedback in one physical automation workflow.</li>
+          </ul>
+        </article>
+
+        <article class="resume-item">
+          <div class="item-heading">
+            <h3>Autonomous Line-Following and Maze-Solving Robot</h3>
+            <span>Robotics</span>
+          </div>
+          <ul>
+            <li>Developed autonomous navigation using IR sensors, ultrasonic sensing, and motor control.</li>
+            <li>Implemented left-hand and right-hand rule algorithms for maze solving.</li>
+            <li>Integrated Bluetooth control through MIT App Inventor for manual override functionality.</li>
+            <li>Tuned sensor thresholds and navigation behavior to improve path following and obstacle response.</li>
+          </ul>
+        </article>
+
+        <article class="resume-item">
+          <div class="item-heading">
+            <h3>VLAN Network Configuration</h3>
+            <span>Cisco Packet Tracer</span>
+          </div>
+          <ul>
+            <li>Designed a multi-VLAN network for traffic segmentation.</li>
+            <li>Configured routing and validated communication between VLANs.</li>
+            <li>Applied network simulation to test structured communication paths before deployment.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section">
+        <h2>Research, Testing, and Technical Documentation</h2>
+        <ul>
+          <li>Prepared capstone documentation covering problem background, objectives, scope, related literature, methodology, results, conclusions, and recommendations.</li>
+          <li>Conducted controlled testing of rock salt samples across multiple sample sources and trials.</li>
+          <li>Used percentage, mean, and weighted average treatments to summarize system performance and user evaluation data.</li>
+          <li>Documented prototype visuals, circuit diagrams, 3D design, hardware development, object detection training, and UI outputs.</li>
+          <li>Used AI tools to support research organization, technical writing review, debugging direction, and clearer project documentation.</li>
+          <li>Identified future improvements such as expanded datasets, stronger laboratory validation, and improved imaging/illumination components.</li>
+        </ul>
+      </section>
+
+      <section class="resume-section split">
+        <div>
+          <h2>Affiliations</h2>
+          <ul>
+            <li>Institute of Electronics Engineers of the Philippines, Student Member</li>
+            <li>Electronics Engineering Student Society, Member</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Languages and Interests</h2>
+          <ul>
+            <li><strong>Languages:</strong> Filipino and English.</li>
+            <li><strong>Technical Interests:</strong> AI usage, API integrations, embedded systems, electronics prototyping, automation, troubleshooting.</li>
+            <li><strong>Working Style:</strong> hands-on prototyping, careful documentation, iterative testing, and learning new engineering tools.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section">
+        <h2>Additional Information</h2>
+        <ul>
+          <li>Experience in system prototyping, testing, debugging, sensor integration, and technical documentation.</li>
+          <li>Strong focus on integrating AI with physical hardware systems for practical, real-world applications.</li>
+          <li>Comfortable using AI assistants responsibly as learning, planning, debugging, and documentation tools while validating final technical decisions.</li>
+          <li>Portfolio includes project case studies, final paper, 3D design renders, and detection UI screenshots.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("printResume").addEventListener("click", function () {
+      window.print();
+    });
+  </script>
+</body>
+</html>

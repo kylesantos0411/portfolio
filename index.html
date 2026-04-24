@@ -1,553 +1,1043 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Kai - Python Developer specializing in automation and AI. Building smart solutions for a better future.">
-  <meta name="keywords" content="Python, Developer, Automation, AI, Portfolio, Software Engineer">
-  <meta name="author" content="Kai">
+  <meta
+    name="description"
+    content="Kyle Santos is an Electronics Engineering student building embedded systems, AI computer vision workflows, and hardware-software prototypes such as MICROTECT."
+  >
+  <meta
+    name="keywords"
+    content="Kyle Santos, electronics engineering, embedded systems, AI, computer vision, YOLOv11, Raspberry Pi, ESP32, Arduino, MICROTECT"
+  >
+  <meta name="author" content="Kyle Santos">
 
-  <title>Kai | Automating the Future, One Script at a Time</title>
+  <!-- Security: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; object-src 'none';">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://kylesantos0411.github.io/portfolio/">
 
-  <!-- Google Fonts - JetBrains Mono -->
+  <title>Kyle Santos | Embedded Systems and AI Engineer</title>
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230f1110'/%3E%3Cpath d='M18 32h26v10H18zm38 0h26v10H56zM18 58h26v10H18zm38 0h26v10H56z' fill='%23e45d3f'/%3E%3Cpath d='M45 18h10v64H45z' fill='%2345c6a6'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23f7f4ee'/%3E%3C/svg%3E"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
-
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <!-- Google Analytics - Replace G-T8NWHLWLMY with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8NWHLWLMY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-T8NWHLWLMY');
-  </script>
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav class="nav" id="navbar">
-    <div class="container nav__container">
-      <a href="#" class="nav__logo">
-        <span>&lt;</span>kai<span>/&gt;</span>
-      </a>
+  <div class="site-shell">
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#experience" class="nav__link">Experience</a></li>
-        <li><a href="#electronics" class="nav__link">Electronics</a></li>
-        <li><a href="#blog" class="nav__link">Blog</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
+    <nav class="nav" id="navbar">
+      <div class="container nav__container">
+        <a href="#top" class="nav__logo" aria-label="Kyle Santos home">
+          <span class="nav__mark">KS</span>
+          <span class="nav__wordmark">Kyle Santos</span>
+        </a>
 
-      <div class="nav__actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg class="moon-icon" style="display:none;" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="projects.html" class="nav__link">Projects</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#resume" class="nav__link">Resume</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v2.25M12 18.75V21M4.22 4.22l1.6 1.6M18.18 18.18l1.6 1.6M3 12h2.25M18.75 12H21M4.22 19.78l1.6-1.6M18.18 5.82l1.6-1.6M12 16.25a4.25 4.25 0 1 0 0-8.5 4.25 4.25 0 0 0 0 8.5Z"/>
+            </svg>
+            <svg class="moon-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12.8A8.8 8.8 0 1 1 11.2 3a7 7 0 1 0 9.8 9.8Z"/>
+            </svg>
+          </button>
+
+          <a href="mailto:kylesantos0411@gmail.com" class="btn btn--primary">Email Kyle</a>
+
+          <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <aside class="portfolio-sidebar" id="portfolioSidebar" aria-label="Portfolio sidebar">
+      <div class="portfolio-sidebar__rail" aria-label="Quick actions">
+        <button
+          type="button"
+          class="portfolio-sidebar__icon-button"
+          data-sidebar-toggle
+          aria-label="Open portfolio menu"
+          aria-expanded="false"
+          aria-controls="portfolioSidebarDrawer"
+          title="Portfolio menu"
+        >
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+            <path d="M10 5v14"></path>
           </svg>
         </button>
-        <a href="assets/resume.pdf" class="btn btn--primary" download>Resume</a>
-        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <button
+          type="button"
+          class="portfolio-sidebar__icon-button"
+          data-sidebar-toggle
+          aria-label="Open project shortcuts"
+          aria-expanded="false"
+          aria-controls="portfolioSidebarDrawer"
+          title="Project shortcuts"
+        >
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M4 20h16"></path>
+            <path d="M6 16.5 16.8 5.7a2.1 2.1 0 0 1 3 3L9 19l-4 1Z"></path>
+          </svg>
+        </button>
+
+        <a
+          href="projects.html#projectSearch"
+          class="portfolio-sidebar__icon-button"
+          aria-label="Search projects"
+          title="Search projects"
+        >
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="m16 16 4 4"></path>
+          </svg>
+        </a>
+
+        <a href="#contact" class="portfolio-sidebar__icon-button" aria-label="Go to contact" title="Contact">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M5 17.5 4 21l3.8-1A8.2 8.2 0 1 0 5 17.5Z"></path>
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          class="portfolio-sidebar__avatar"
+          data-sidebar-toggle
+          aria-label="Open Kyle Santos portfolio menu"
+          aria-expanded="false"
+          aria-controls="portfolioSidebarDrawer"
+          title="Kyle Santos"
+        >
+          KS
         </button>
       </div>
+
+      <div class="portfolio-sidebar__drawer" id="portfolioSidebarDrawer">
+        <div class="portfolio-sidebar__header">
+          <span class="portfolio-sidebar__brand-mark">KS</span>
+          <div>
+            <strong>Kyle Santos</strong>
+            <span>Portfolio shortcuts</span>
+          </div>
+          <button
+            type="button"
+            class="portfolio-sidebar__collapse"
+            data-sidebar-toggle
+            aria-label="Collapse portfolio menu"
+            aria-expanded="false"
+            aria-controls="portfolioSidebarDrawer"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+              <path d="M10 5v14"></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="portfolio-sidebar__nav" aria-label="Portfolio menu">
+          <a href="projects.html" class="portfolio-sidebar__item">
+            <span class="portfolio-sidebar__item-icon">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M4 6.5h6l1.6 2H20v8.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"></path>
+              </svg>
+            </span>
+            Projects
+          </a>
+
+          <button type="button" class="portfolio-sidebar__item" data-feature-open="microtect">
+            <span class="portfolio-sidebar__item-icon">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M4 5h4M4 5v4M20 5h-4M20 5v4M4 19h4M4 19v-4M20 19h-4M20 19v-4"></path>
+                <circle cx="10" cy="10" r="2.4"></circle>
+                <circle cx="15.5" cy="14.5" r="1.8"></circle>
+              </svg>
+            </span>
+            MICROTECT
+          </button>
+
+          <button type="button" class="portfolio-sidebar__item" data-feature-open="hercare">
+            <span class="portfolio-sidebar__item-icon">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <rect x="7" y="3" width="10" height="18" rx="2.2"></rect>
+                <path d="M12 13.2s-3.2-1.9-3.2-4.2A1.9 1.9 0 0 1 12 7.6 1.9 1.9 0 0 1 15.2 9c0 2.3-3.2 4.2-3.2 4.2Z"></path>
+              </svg>
+            </span>
+            HerCare
+          </button>
+
+          <a href="#resume" class="portfolio-sidebar__item">
+            <span class="portfolio-sidebar__item-icon">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M7 3h7l3 3v15H7Z"></path>
+                <path d="M14 3v4h4M9 12h6M9 16h6"></path>
+              </svg>
+            </span>
+            Resume
+          </a>
+
+          <a href="#contact" class="portfolio-sidebar__item">
+            <span class="portfolio-sidebar__item-icon">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M4 6h16v12H4Z"></path>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+            Contact
+          </a>
+        </nav>
+
+        <div class="portfolio-sidebar__section">
+          <span class="portfolio-sidebar__section-label">Featured work</span>
+          <button type="button" class="portfolio-sidebar__project" data-feature-open="microtect">
+            <strong>MICROTECT</strong>
+            <span>AI hardware capstone</span>
+          </button>
+          <button type="button" class="portfolio-sidebar__project" data-feature-open="hercare">
+            <strong>HerCare</strong>
+            <span>Personal mobile app</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="feature-popout" id="featurePopout" hidden>
+      <button type="button" class="feature-popout__scrim" data-feature-close aria-label="Close featured project popout"></button>
+
+      <section
+        class="feature-popout__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="featurePopoutTitle"
+      >
+        <button type="button" class="feature-popout__close" data-feature-close aria-label="Close featured project popout">
+          <span aria-hidden="true">x</span>
+        </button>
+
+        <article class="feature-popout__content is-active" data-feature-content="microtect">
+          <div class="feature-popout__header">
+            <p class="section__eyebrow">Featured capstone</p>
+            <h2 id="featurePopoutTitle">MICROTECT: AI-assisted microplastic detection.</h2>
+            <p>
+              Automated optical detector for rock salt screening using Raspberry Pi image capture,
+              YOLOv11 detection, a result UI, and generated reports.
+            </p>
+          </div>
+
+          <div class="feature-popout__grid">
+            <div class="feature-popout__copy">
+              <dl class="feature-popout__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Manual microscopy can be slow, inconsistent, and hard to repeat.</dd>
+                </div>
+                <div>
+                  <dt>System</dt>
+                  <dd>Sample tray, camera, Raspberry Pi 5, YOLOv11 model, touchscreen UI, and report output.</dd>
+                </div>
+                <div>
+                  <dt>Measured result</dt>
+                  <dd>69.71% mean detection consistency, precision 0.826, and mAP@50 of 0.814.</dd>
+                </div>
+              </dl>
+
+              <div class="feature-popout__actions">
+                <a href="projects.html?project=microtect" class="inline-link" data-feature-close>View project card</a>
+                <a href="assets/papers/microtect-final-paper.pdf" target="_blank" rel="noreferrer" class="inline-link">
+                  Open final paper
+                </a>
+                <a href="https://github.com/kylesantos0411/MICROTECT" target="_blank" rel="noreferrer" class="inline-link">
+                  Open repository
+                </a>
+              </div>
+            </div>
+
+            <figure class="feature-popout__hero-image">
+              <img
+                src="assets/images/microtect/microtect-3d-render-transparent.png"
+                alt="Transparent-background 3D render of the MICROTECT prototype enclosure"
+                width="1406"
+                height="1643"
+              >
+            </figure>
+          </div>
+
+          <div class="feature-popout__media-grid" aria-label="MICROTECT evidence screenshots">
+            <figure>
+              <img src="assets/images/microtect/microtect-detection-ui.png" alt="MICROTECT detection UI output" width="1366" height="822">
+              <figcaption>Detection UI</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/microtect/microtect-3d-perspective.jpg" alt="MICROTECT 3D perspective view" width="817" height="501">
+              <figcaption>3D enclosure</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/microtect/microtect-3d-cutaway.jpg" alt="MICROTECT internal layout cutaway view" width="873" height="491">
+              <figcaption>Internal layout</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="feature-popout__content" data-feature-content="hercare" hidden>
+          <div class="feature-popout__header">
+            <p class="section__eyebrow">Personal software project</p>
+            <h2>HerCare: care routines in a simple mobile flow.</h2>
+            <p>
+              A care-focused mobile app built with React, TypeScript, Vite, Capacitor Android, and
+              Firebase for routines, wellness tracking, focus support, and partner check-ins.
+            </p>
+          </div>
+
+          <div class="feature-popout__grid">
+            <div class="feature-popout__copy">
+              <dl class="feature-popout__facts">
+                <div>
+                  <dt>Product goal</dt>
+                  <dd>Make small care actions easier to remember and follow during busy days.</dd>
+                </div>
+                <div>
+                  <dt>Interface focus</dt>
+                  <dd>Clear daily actions, calm hierarchy, mobile-first layout, and quick status checks.</dd>
+                </div>
+                <div>
+                  <dt>Proof of work</dt>
+                  <dd>Frontend structure, reusable components, app packaging, Firebase-backed flows, and product thinking.</dd>
+                </div>
+              </dl>
+
+              <div class="feature-popout__actions">
+                <a href="projects.html?project=hercare" class="inline-link" data-feature-close>View project card</a>
+                <a href="https://github.com/kylesantos0411/HerCare" target="_blank" rel="noreferrer" class="inline-link">
+                  Open HerCare repository
+                </a>
+              </div>
+            </div>
+
+            <figure class="feature-popout__phone">
+              <img
+                src="assets/images/hercare/hercare-home-private-blur.png"
+                alt="Actual HerCare home screen with shift and partner check-in interface"
+                width="414"
+                height="896"
+              >
+            </figure>
+          </div>
+
+          <div class="feature-popout__phone-grid" aria-label="Actual HerCare app screens">
+            <figure>
+              <img src="assets/images/hercare/hercare-wellness-private-blur.png" alt="Actual HerCare wellness screen" width="414" height="896">
+              <figcaption>Wellness</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/hercare/hercare-meals-private-blur.png" alt="Actual HerCare meals screen" width="414" height="896">
+              <figcaption>Meals</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/hercare/hercare-for-you-private-blur.png" alt="Actual HerCare support cards screen" width="414" height="896">
+              <figcaption>For You</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__code-bg" id="codeBg"></div>
+    <header class="hero section" id="top">
+      <div class="hero__trace" id="codeBg" aria-hidden="true"></div>
 
-    <div class="hero__content">
-      <div class="hero__terminal">
-        <div class="hero__terminal-header">
-          <div class="hero__terminal-dot hero__terminal-dot--red"></div>
-          <div class="hero__terminal-dot hero__terminal-dot--yellow"></div>
-          <div class="hero__terminal-dot hero__terminal-dot--green"></div>
-        </div>
-        <div class="hero__prompt">kai@portfolio:~$</div>
-        <div class="hero__tagline">
-          <span>&gt;</span>
-          <span id="typingText"></span>
-          <span class="typing-cursor"></span>
-        </div>
-      </div>
-
-      <div class="hero__cta">
-        <a href="#projects" class="btn btn--primary">View Projects</a>
-        <a href="#contact" class="btn btn--secondary">Contact Me</a>
-      </div>
-
-      <div class="hero__social">
-        <a href="https://github.com/kylesantos0411" target="_blank" rel="noopener noreferrer" class="hero__social-link"
-          aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/santos-kyle-a-14287b349" target="_blank" rel="noopener noreferrer"
-          class="hero__social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-          </svg>
-        </a>
-        <a href="mailto:kylesantos0411@gmail.com" class="hero__social-link" aria-label="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="about__content fade-in">
-        <div class="about__text">
-          <h3>// about_me</h3>
-          <h2>Hello, I'm Kai</h2>
-          <p>
-            I'm a Python developer passionate about automation and leveraging AI to build
-            smarter solutions. My journey in tech started with curiosity about how things work,
-            and evolved into a career of making them work better.
-          </p>
-          <p>
-            When I'm not writing code, you'll find me tinkering with electronics, exploring
-            new AI tools, or automating another mundane task that shouldn't require human attention.
-          </p>
-          <div class="about__skills">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Automation</span>
-            <span class="skill-tag">AI/ML</span>
-            <span class="skill-tag">APIs</span>
-            <span class="skill-tag">Web Scraping</span>
-            <span class="skill-tag">Data Processing</span>
-            <span class="skill-tag">Electronics</span>
-            <span class="skill-tag">IoT</span>
-          </div>
-        </div>
-        <div class="about__image">
-          <div class="about__code-block">
-            <pre><code><span class="code-keyword">class</span> <span class="code-function">Developer</span>:
-    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
-        self.name = <span class="code-string">"Kai"</span>
-        self.role = <span class="code-string">"Python Developer"</span>
-        self.focus = [
-            <span class="code-string">"Automation"</span>,
-            <span class="code-string">"AI Integration"</span>,
-            <span class="code-string">"Electronics"</span>
-        ]
-        self.currently_learning = <span class="code-string">"Always something new"</span>
-    
-    <span class="code-keyword">def</span> <span class="code-function">get_daily_routine</span>(self):
-        <span class="code-keyword">return</span> <span class="code-string">"Code → Automate → Repeat"</span></code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="section projects" id="projects">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__title">Projects</h2>
-        <p class="section__subtitle">A selection of things I've built</p>
-      </div>
-
-      <div class="projects__grid">
-        <!-- Project 1 -->
-        <div class="card project-card fade-in">
-          <div class="project-card__image">
-            <!-- Add project screenshot here -->
-            <span>Project Screenshot</span>
-          </div>
-          <h3 class="project-card__title">Automation Framework</h3>
-          <p class="project-card__description">
-            A comprehensive automation framework for handling repetitive tasks with
-            scheduling, error handling, and notification systems.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Selenium</span>
-            <span class="tech-tag">Schedule</span>
-          </div>
-          <div class="project-card__links">
-            <a href="#" class="btn btn--secondary">View Code</a>
-            <a href="#" class="btn btn--ghost">Live Demo →</a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="card project-card fade-in">
-          <div class="project-card__image">
-            <span>Project Screenshot</span>
-          </div>
-          <h3 class="project-card__title">AI Data Analyzer</h3>
-          <p class="project-card__description">
-            An intelligent data analysis tool that uses machine learning to identify
-            patterns and generate insights from complex datasets.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Scikit-learn</span>
-          </div>
-          <div class="project-card__links">
-            <a href="#" class="btn btn--secondary">View Code</a>
-            <a href="#" class="btn btn--ghost">Live Demo →</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card project-card fade-in">
-          <div class="project-card__image">
-            <span>Project Screenshot</span>
-          </div>
-          <h3 class="project-card__title">IoT Home Controller</h3>
-          <p class="project-card__description">
-            A smart home automation system built with Raspberry Pi, integrating
-            sensors and actuators for intelligent environment control.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">MQTT</span>
-            <span class="tech-tag">Raspberry Pi</span>
-          </div>
-          <div class="project-card__links">
-            <a href="#" class="btn btn--secondary">View Code</a>
-            <a href="#" class="btn btn--ghost">Live Demo →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Timeline Section -->
-  <section class="section experience" id="experience">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__title">Experience</h2>
-        <p class="section__subtitle">My professional journey</p>
-      </div>
-
-      <div class="timeline">
-        <!-- Experience 1 -->
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <span class="timeline__date">2024 - Present</span>
-          <h3 class="timeline__title">Senior Python Developer</h3>
-          <p class="timeline__company">Company Name</p>
-          <p class="timeline__description">
-            Leading automation initiatives and developing AI-powered solutions
-            to streamline business processes and improve efficiency.
-          </p>
-        </div>
-
-        <!-- Experience 2 -->
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <span class="timeline__date">2022 - 2024</span>
-          <h3 class="timeline__title">Python Developer</h3>
-          <p class="timeline__company">Previous Company</p>
-          <p class="timeline__description">
-            Developed and maintained automation scripts, built data pipelines,
-            and integrated third-party APIs for various business applications.
-          </p>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <span class="timeline__date">2020 - 2022</span>
-          <h3 class="timeline__title">Junior Developer</h3>
-          <p class="timeline__company">First Company</p>
-          <p class="timeline__description">
-            Started my journey in professional software development, learning
-            best practices and contributing to team projects.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__title">Testimonials</h2>
-        <p class="section__subtitle">What others say about working with me</p>
-      </div>
-
-      <div class="testimonials__grid">
-        <!-- Testimonial 1 -->
-        <div class="card testimonial-card fade-in">
-          <div class="testimonial-card__avatar">👤</div>
-          <p class="testimonial-card__quote">
-            Kai delivered exceptional work on our automation project. His code was
-            clean, well-documented, and exceeded our expectations.
-          </p>
-          <h4 class="testimonial-card__name">John Doe</h4>
-          <p class="testimonial-card__role">Project Manager at TechCorp</p>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="card testimonial-card fade-in">
-          <div class="testimonial-card__avatar">👤</div>
-          <p class="testimonial-card__quote">
-            Working with Kai was a pleasure. He understood our requirements quickly
-            and delivered a solution that saved us countless hours.
-          </p>
-          <h4 class="testimonial-card__name">Jane Smith</h4>
-          <p class="testimonial-card__role">CTO at StartupXYZ</p>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="card testimonial-card fade-in">
-          <div class="testimonial-card__avatar">👤</div>
-          <p class="testimonial-card__quote">
-            Highly recommend Kai for any Python development work. Professional,
-            responsive, and technically excellent.
-          </p>
-          <h4 class="testimonial-card__name">Alex Johnson</h4>
-          <p class="testimonial-card__role">Founder at AutomateNow</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Electronics Search Section -->
-  <section class="section electronics" id="electronics">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__title">🔌 Electronics Knowledge Base</h2>
-        <p class="section__subtitle">A curated collection of electronics knowledge • Search components, protocols,
-          tools, and more</p>
-      </div>
-
-      <div class="electronics__search-container fade-in">
-        <div class="electronics__search-box">
-          <svg class="electronics__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-          <input type="text" class="electronics__search-input" id="electronicsSearch"
-            placeholder="Search: Arduino, I2C, oscilloscope, resistor..." autocomplete="off">
-        </div>
-      </div>
-
-      <div class="electronics__results" id="electronicsResults">
-        <!-- Results populated by JavaScript -->
-      </div>
-
-      <div class="electronics__no-results" id="noResults" style="display: none;">
-        <p>No results found. Try a different search term.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section class="section blog" id="blog">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__title">Blog</h2>
-        <p class="section__subtitle">Thoughts, tutorials, and insights</p>
-      </div>
-
-      <div class="blog__grid">
-        <!-- Blog Post 1 -->
-        <div class="card blog-card fade-in">
-          <div class="blog-card__image"></div>
-          <div class="blog-card__meta">
-            <span>Jan 15, 2026</span>
-            <span>•</span>
-            <span>5 min read</span>
-          </div>
-          <h3 class="blog-card__title">Automating Your Workflow with Python</h3>
-          <p class="blog-card__excerpt">
-            Learn how to identify automation opportunities and build efficient
-            Python scripts to reclaim your time.
-          </p>
-          <div class="blog-card__tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Automation</span>
-          </div>
-        </div>
-
-        <!-- Blog Post 2 -->
-        <div class="card blog-card fade-in">
-          <div class="blog-card__image"></div>
-          <div class="blog-card__meta">
-            <span>Dec 20, 2025</span>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-          <h3 class="blog-card__title">Getting Started with ESP32 and MicroPython</h3>
-          <p class="blog-card__excerpt">
-            A beginner's guide to programming the ESP32 microcontroller using
-            MicroPython for IoT projects.
-          </p>
-          <div class="blog-card__tags">
-            <span class="tech-tag">IoT</span>
-            <span class="tech-tag">MicroPython</span>
-          </div>
-        </div>
-
-        <!-- Blog Post 3 -->
-        <div class="card blog-card fade-in">
-          <div class="blog-card__image"></div>
-          <div class="blog-card__meta">
-            <span>Nov 10, 2025</span>
-            <span>•</span>
-            <span>6 min read</span>
-          </div>
-          <h3 class="blog-card__title">Integrating AI into Your Python Projects</h3>
-          <p class="blog-card__excerpt">
-            Practical tips for adding AI capabilities to your applications
-            using modern APIs and libraries.
-          </p>
-          <div class="blog-card__tags">
-            <span class="tech-tag">AI</span>
-            <span class="tech-tag">Python</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__title">Get in Touch</h2>
-        <p class="section__subtitle">Let's build something great together</p>
-      </div>
-
-      <div class="contact__content fade-in">
-        <div class="contact__info">
-          <h3>Let's Connect</h3>
-          <p>
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of something great.
+      <div class="container hero__grid">
+        <div class="hero__content fade-in">
+          <p class="section__eyebrow">Embedded Systems + AI Portfolio</p>
+          <h1 class="hero__title">Kyle Santos</h1>
+          <p class="hero__headline">Electronics engineering graduate focused on embedded AI systems.</p>
+          <p class="hero__lede">
+            I build hardware-software prototypes around sensors, Raspberry Pi workflows,
+            computer vision, and practical automation.
           </p>
 
-          <div class="contact__methods">
-            <div class="contact__method">
-              <div class="contact__method-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+          <div class="hero__signal">
+            <span class="hero__prompt">signal://</span>
+            <span id="typingText"></span>
+            <span class="typing-cursor" aria-hidden="true"></span>
+          </div>
+
+          <div class="hero__actions">
+            <a href="projects.html" class="btn btn--primary">View Projects</a>
+            <a href="assets/papers/kyle-santos-resume.pdf" target="_blank" rel="noreferrer" class="btn btn--secondary">Download Resume</a>
+            <a href="https://github.com/kylesantos0411" target="_blank" rel="noreferrer" class="btn btn--secondary">
+              GitHub Profile
+            </a>
+          </div>
+
+          <dl class="hero__quick" aria-label="Portfolio quick facts">
+            <div>
+              <dt>Focus</dt>
+              <dd>Embedded systems / AI computer vision</dd>
+            </div>
+            <div>
+              <dt>Looking for</dt>
+              <dd>Internships and junior engineering roles</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Quezon City, Philippines</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+639194850794">0919 485 0794</a></dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero__visual fade-in" aria-label="Kyle Santos portfolio identity card">
+          <div class="portrait-card" id="portraitCard">
+            <div class="portrait-card__topline">
+              <span>Candidate profile</span>
+              <span>2026</span>
+            </div>
+
+            <div class="portrait-card__media portrait-card__media--product">
+              <img
+                src="assets/images/microtect/microtect-3d-render-transparent.png"
+                alt="Transparent-background 3D render of the MICROTECT prototype"
+                width="420"
+                height="420"
+              >
+              <span class="portrait-card__scan" aria-hidden="true"></span>
+            </div>
+
+            <div class="portrait-card__body">
+              <span class="portrait-card__status">Open to opportunities</span>
+              <h2>I build real engineering systems integrating AI and hardware.</h2>
+              <p>
+                Featured proof: MICROTECT, an automated optical detector for microplastics in
+                rock salt developed at Marikina Polytechnic College.
+              </p>
+            </div>
+
+            <ul class="hero__stats" id="heroStats" aria-label="Portfolio stats"></ul>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section profile" id="about">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">About</p>
+            <h2 class="section__title">Real systems, not just demos.</h2>
+            <p class="section__copy">
+              My strongest work sits at the intersection of electronics, embedded systems,
+              computer vision, and physical prototypes that can be tested in the real world.
+            </p>
+          </div>
+
+          <div class="profile__grid">
+            <article class="profile__story panel fade-in">
+              <p>
+                I am an Electronics Engineering student specializing in embedded systems and
+                AI-based computer vision, graduated from Marikina Polytechnic College. I like
+                building complete systems: sensors and circuits, controller logic, camera
+                workflows, model outputs, user interfaces, and testing notes that make the
+                prototype easier to trust.
+              </p>
+              <p>
+                My capstone work, MICROTECT, reflects the kind of engineering I want to keep doing:
+                useful hardware-software systems for automation, environmental monitoring, and
+                applied AI.
+              </p>
+
+              <div class="profile__tags" aria-label="Skill tags">
+                <span class="skill-tag">Embedded Systems</span>
+                <span class="skill-tag">AI + Hardware</span>
+                <span class="skill-tag">AI-Assisted Development</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">YOLOv11</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">APIs</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">Raspberry Pi</span>
+                <span class="skill-tag">ESP32</span>
+                <span class="skill-tag">Arduino</span>
+              </div>
+            </article>
+
+            <div class="profile__board fade-in">
+              <article class="panel profile__panel">
+                <span class="profile__panel-label">Portfolio message</span>
+                <ul class="profile__list">
+                  <li>I build real engineering systems integrating AI and hardware.</li>
+                  <li>My work focuses on embedded systems, computer vision, and real-world applications.</li>
+                  <li>Projects are presented with problem, solution, architecture, hardware, logic, results, and fixes.</li>
+                </ul>
+              </article>
+
+              <article class="panel profile__panel">
+                <span class="profile__panel-label">Current direction</span>
+                <ul class="profile__list">
+                  <li>Embedded systems and AI/computer vision internships or junior opportunities.</li>
+                  <li>Engineering work that values prototyping, testing, debugging, and clear documentation.</li>
+                  <li>Teams building useful systems around devices, data, automation, or environmental monitoring.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section hercare-showcase" id="hercare" hidden>
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Software interface</p>
+            <h2 class="section__title">HerCare: care routines in a simple mobile flow.</h2>
+            <p class="section__copy">
+              A personal companion app interface designed around gentle daily support: routines,
+              focus sessions, wellness notes, and partner-aware check-ins.
+            </p>
+          </div>
+
+          <div class="hercare-layout fade-in">
+            <article class="hercare-brief">
+              <span class="research__label">Product goal</span>
+              <h3>Make small care actions easier to remember and follow.</h3>
+              <p>
+                HerCare shows a different side of my work: not hardware, but practical software
+                with human-centered UX, mobile layout decisions, and Android delivery.
+              </p>
+
+              <dl class="hercare-points">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>React, TypeScript, Vite, Capacitor Android, Firebase</dd>
+                </div>
+                <div>
+                  <dt>Interface focus</dt>
+                  <dd>Clear daily actions, calm visual hierarchy, quick status checks</dd>
+                </div>
+                <div>
+                  <dt>Proof of work</dt>
+                  <dd>Frontend structure, reusable components, app packaging, product thinking</dd>
+                </div>
+              </dl>
+
+              <a href="https://github.com/kylesantos0411/HerCare" target="_blank" rel="noreferrer" class="inline-link">
+                Open HerCare repository
+              </a>
+            </article>
+
+            <div class="hercare-screens" aria-label="Actual HerCare app interface screenshots">
+              <figure class="hercare-screen hercare-screen--featured">
+                <img
+                  src="assets/images/hercare/hercare-home-private-blur.png"
+                  alt="Actual HerCare home screen with night duty card, partner check-in, and bottom navigation"
+                  width="414"
+                  height="896"
+                  loading="lazy"
+                >
+                <figcaption>
+                  <strong>Home and partner check-in</strong>
+                  <span>Shift status, quick actions, location sharing, and the main mobile navigation.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="hercare-screen">
+                <img
+                  src="assets/images/hercare/hercare-wellness-private-blur.png"
+                  alt="Actual HerCare wellness screen showing hydration and sleep cards"
+                  width="414"
+                  height="896"
+                  loading="lazy"
+                >
+                <figcaption>
+                  <strong>Wellness tracking</strong>
+                  <span>Hydration, sleep, mood, and care actions arranged for fast checking.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="hercare-screen">
+                <img
+                  src="assets/images/hercare/hercare-meals-private-blur.png"
+                  alt="Actual HerCare meals screen showing meal reminders and logs"
+                  width="414"
+                  height="896"
+                  loading="lazy"
+                >
+                <figcaption>
+                  <strong>Meals</strong>
+                  <span>Simple meal logs and reminders for busy shift days.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="hercare-screen">
+                <img
+                  src="assets/images/hercare/hercare-for-you-private-blur.png"
+                  alt="Actual HerCare For You screen with a personal comfort message"
+                  width="414"
+                  height="896"
+                  loading="lazy"
+                >
+                <figcaption>
+                  <strong>For You</strong>
+                  <span>Personal support cards inside the same app flow.</span>
+                </figcaption>
+              </figure>
+
+              <figure class="hercare-screen">
+                <img
+                  src="assets/images/hercare/hercare-open-when-private-blur.png"
+                  alt="Actual HerCare Open When screen with a longer support message"
+                  width="414"
+                  height="896"
+                  loading="lazy"
+                >
+                <figcaption>
+                  <strong>Open When</strong>
+                  <span>A focused support screen for longer care messages.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section research" id="research" hidden>
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Featured capstone</p>
+            <h2 class="section__title">MICROTECT: AI-assisted microplastic detection.</h2>
+            <p class="section__copy">
+              Final paper, 3D prototype views, detection UI, and measurable model results from
+              the capstone project completed at Marikina Polytechnic College.
+            </p>
+          </div>
+
+          <div class="research__grid">
+            <article class="panel research__paper fade-in">
+              <span class="research__label">Capstone project</span>
+              <h3>Development of an Automated Optical Detector for Microplastics in Rock Salt</h3>
+              <p>
+                MICROTECT is an automated optical detector for retail and domestic rock salt
+                screening. The system combines optical imaging, a Raspberry Pi-based processing
+                unit, a YOLOv11 AI model, result visualization, and report generation.
+              </p>
+
+              <dl class="research__facts">
+                <div>
+                  <dt>Real-world problem</dt>
+                  <dd>Manual microscopy can be slow, inconsistent, and difficult to repeat.</dd>
+                </div>
+                <div>
+                  <dt>System approach</dt>
+                  <dd>AI-assisted inspection using image capture, YOLOv11 detection, UI feedback, and reports.</dd>
+                </div>
+                <div>
+                  <dt>Measured outcome</dt>
+                  <dd>69.71% mean detection consistency, with precision 0.826 and mAP@50 of 0.814.</dd>
+                </div>
+              </dl>
+
+              <div class="research__actions">
+                <a href="projects.html?project=microtect" class="inline-link">View project card</a>
+                <a href="assets/papers/microtect-final-paper.pdf" target="_blank" rel="noreferrer" class="inline-link">
+                  Open final paper
+                </a>
+                <a href="https://github.com/kylesantos0411/MICROTECT" target="_blank" rel="noreferrer" class="inline-link">
+                  Open repository
+                </a>
+              </div>
+            </article>
+
+            <div class="research__evidence">
+              <article class="research__model fade-in" aria-label="3D design concept frame">
+                <div class="research__image-frame research__image-frame--transparent">
+                  <img
+                    src="assets/images/microtect/microtect-3d-render-transparent.png"
+                    alt="Transparent-background 3D render of the MICROTECT prototype enclosure"
+                    width="1406"
+                    height="1643"
+                  >
+                </div>
+                <div>
+                  <span class="research__label">3D design</span>
+                  <h3>Prototype enclosure and instrument layout</h3>
+                  <p>Background-removed render prepared for the portfolio hero and featured case study.</p>
+                </div>
+              </article>
+
+              <div class="research__artifact-grid">
+                <article class="research__artifact fade-in">
+                  <span class="research__artifact-kicker">Prototype</span>
+                  <h3>Front, back, wiring, and test setup</h3>
+                  <p>3D views and cutaway visuals show the enclosure, display tray, camera area, and internal layout.</p>
+                </article>
+
+                <article class="research__artifact fade-in">
+                  <span class="research__artifact-kicker">Results</span>
+                  <h3>UI screenshots, graphs, and demo video</h3>
+                  <p>Detection UI evidence shows particle counts, MP/g, confidence, concentration level, and analysis views.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="microtect-gallery fade-in" aria-label="MICROTECT visual evidence">
+            <figure class="microtect-gallery__item microtect-gallery__item--wide">
+              <img
+                src="assets/images/microtect/microtect-detection-ui.png"
+                alt="MICROTECT detection user interface showing suspected microplastic labels and concentration metrics"
+                width="1366"
+                height="822"
+              >
+              <figcaption>Detection UI with particle count, MP/g, confidence, and analysis output.</figcaption>
+            </figure>
+
+            <figure class="microtect-gallery__item">
+              <img
+                src="assets/images/microtect/microtect-3d-perspective.jpg"
+                alt="MICROTECT 3D prototype perspective view"
+                width="817"
+                height="501"
+              >
+              <figcaption>3D perspective view of the prototype enclosure.</figcaption>
+            </figure>
+
+            <figure class="microtect-gallery__item">
+              <img
+                src="assets/images/microtect/microtect-3d-front.jpg"
+                alt="MICROTECT 3D front view with display tray"
+                width="793"
+                height="527"
+              >
+              <figcaption>Front view showing the display tray and housing geometry.</figcaption>
+            </figure>
+
+            <figure class="microtect-gallery__item">
+              <img
+                src="assets/images/microtect/microtect-3d-cutaway.jpg"
+                alt="MICROTECT 3D cutaway view showing internal layout"
+                width="873"
+                height="491"
+              >
+              <figcaption>Cutaway view showing internal component placement.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Experience</p>
+            <h2 class="section__title">What the projects demonstrate.</h2>
+            <p class="section__copy">
+              Capstone leadership, embedded monitoring, automation, robotics, network
+              configuration, and technical documentation.
+            </p>
+          </div>
+
+          <div class="experience__grid">
+            <article class="experience-card fade-in">
+              <span class="experience-card__date">2026</span>
+              <h3>Capstone team leader and full-system developer</h3>
+              <p>
+                Led and developed MICROTECT end to end: image capture, YOLOv11 inference, backend
+                processing logic, frontend result UI, UX flow, detection visualization, and report
+                generation.
+              </p>
+              <ul>
+                <li>Owned the operator workflow from sample capture to detection review, graph views, and report output.</li>
+                <li>Designed the UI/UX for clear inspection, result reading, and repeatable documentation.</li>
+                <li>Coordinated hardware, software, testing, and technical documentation into one complete system.</li>
+              </ul>
+            </article>
+
+            <article class="experience-card fade-in">
+              <span class="experience-card__date">2026</span>
+              <h3>Embedded systems prototyper</h3>
+              <p>
+                Built sensor and automation prototypes using ESP32, Arduino, LCD/OLED feedback,
+                servo control, buzzer alerts, and environmental sensing.
+              </p>
+              <ul>
+                <li>Integrated motion, temperature, smoke, ultrasonic, and LDR sensors.</li>
+                <li>Tested modules individually before full-system validation.</li>
+              </ul>
+            </article>
+
+            <article class="experience-card fade-in">
+              <span class="experience-card__date">Ongoing</span>
+              <h3>Robotics, networks, and technical documentation</h3>
+              <p>
+                Developed autonomous navigation logic, Bluetooth manual override, VLAN network
+                simulations, and portfolio documentation for project handoff.
+              </p>
+              <ul>
+                <li>Used rule-based maze solving, IR sensing, ultrasonic sensing, and motor control.</li>
+                <li>Configured VLAN segmentation and routing in Cisco Packet Tracer.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section systems" id="skills">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Skills</p>
+            <h2 class="section__title">Skills at a glance.</h2>
+            <p class="section__copy">
+              Grouped by what I can contribute on an embedded systems or AI-assisted prototype team.
+            </p>
+          </div>
+
+          <div class="systems__grid">
+            <article class="panel system-card fade-in">
+              <span class="system-card__label">01</span>
+              <h3>Embedded systems</h3>
+              <p>
+                ESP32, Arduino UNO, Raspberry Pi 5, sensor integration, motor control systems,
+                LCD/OLED feedback, and hardware-aware firmware logic.
+              </p>
+            </article>
+
+            <article class="panel system-card fade-in">
+              <span class="system-card__label">02</span>
+              <h3>AI and computer vision</h3>
+              <p>
+                YOLOv11, OpenCV, dataset annotation with Roboflow, model training, model evaluation,
+                detection UI, and result visualization.
+              </p>
+            </article>
+
+            <article class="panel system-card fade-in">
+              <span class="system-card__label">03</span>
+              <h3>Electronics and hardware</h3>
+              <p>
+                Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters,
+                UV/white LED control, debugging, and physical prototyping.
+              </p>
+            </article>
+
+            <article class="panel system-card fade-in">
+              <span class="system-card__label">04</span>
+              <h3>AI tools, APIs, and development workflow</h3>
+              <p>
+                VS Code, Antigravity, ChatGPT, Claude, API concepts, JSON/HTTP basics,
+                documentation reading, prompt-guided debugging, and project planning.
+              </p>
+            </article>
+          </div>
+
+          <div class="skill-matrix fade-in" aria-label="Skill groups">
+            <article class="skill-column">
+              <span>Programming</span>
+              <p>Python with OpenCV and YOLOv11, C/C++ for Arduino and ESP32</p>
+            </article>
+
+            <article class="skill-column">
+              <span>Embedded</span>
+              <p>ESP32, Arduino UNO, Raspberry Pi 5, sensors, motors, displays</p>
+            </article>
+
+            <article class="skill-column">
+              <span>AI / Vision</span>
+              <p>YOLOv11, Roboflow annotation, model training, evaluation, UI outputs</p>
+            </article>
+
+            <article class="skill-column">
+              <span>AI Workflow</span>
+              <p>ChatGPT, Claude, Antigravity, VS Code, API learning, documentation, debugging support</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section electronics" id="electronics">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Electronics lab</p>
+            <h2 class="section__title">A searchable pocket reference for hardware concepts.</h2>
+            <p class="section__copy">
+              This section keeps the site personal to my engineering interests instead of only
+              presenting a standard list of web technologies.
+            </p>
+          </div>
+
+          <div class="electronics__search-container fade-in">
+            <div class="electronics__search-box">
+              <svg class="electronics__search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input
+                type="text"
+                class="electronics__search-input"
+                id="electronicsSearch"
+                placeholder="Search: ESP32, I2C, oscilloscope, PCB design"
+                autocomplete="off"
+              >
+            </div>
+          </div>
+
+          <div class="electronics__results" id="electronicsResults"></div>
+
+          <div class="empty-state" id="noResults" hidden>
+            <h3>No electronics entries matched.</h3>
+            <p>Try a component, microcontroller, protocol, or lab tool.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section resume" id="resume">
+        <div class="container">
+          <div class="section-heading fade-in">
+            <p class="section__eyebrow">Resume</p>
+            <h2 class="section__title">Resume and contact details.</h2>
+            <p class="section__copy">
+              Two-page PDF resume, education, contact information, core stack, and strongest project evidence.
+            </p>
+          </div>
+
+          <div class="resume__grid">
+            <article class="panel resume__summary fade-in">
+              <span class="resume__label">Candidate summary</span>
+              <h3>Kyle Santos</h3>
+              <p>
+                Electronics Engineering student specializing in embedded systems and AI-based
+                computer vision. Experienced in designing and integrating hardware-software systems
+                using ESP32, Arduino, and Raspberry Pi, with applied knowledge in YOLO-based object
+                detection. Graduated from Marikina Polytechnic College.
+              </p>
+
+              <div class="resume__actions">
+                <a href="assets/papers/kyle-santos-resume.pdf" target="_blank" rel="noreferrer" class="btn btn--primary">Download Resume</a>
+                <a href="mailto:kylesantos0411@gmail.com" class="btn btn--secondary">Email Kyle</a>
+              </div>
+            </article>
+
+            <aside class="resume__facts fade-in" aria-label="Resume quick facts">
+              <div>
+                <span>Target roles</span>
+                <p>Embedded systems, AI/computer vision, electronics, automation, environmental monitoring</p>
               </div>
               <div>
-                <span class="contact__method-label">Email</span>
-                <p class="contact__method-value">kylesantos0411@gmail.com</p>
-              </div>
-            </div>
-
-            <div class="contact__method">
-              <div class="contact__method-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
+                <span>Strongest evidence</span>
+                <p>MICROTECT capstone, ESP32 monitoring, smart feeder, maze-solving robot, VLAN configuration</p>
               </div>
               <div>
-                <span class="contact__method-label">GitHub</span>
-                <p class="contact__method-value">github.com/kylesantos0411</p>
-              </div>
-            </div>
-
-            <div class="contact__method">
-              <div class="contact__method-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
+                <span>Education</span>
+                <p>Bachelor of Science in Electronics Engineering, Marikina Polytechnic College.</p>
               </div>
               <div>
-                <span class="contact__method-label">LinkedIn</span>
-                <p class="contact__method-value">linkedin.com/in/santos-kyle-a-14287b349</p>
+                <span>Affiliations</span>
+                <p>Institute of Electronics Engineers of the Philippines, Electronics Engineering Student Society</p>
               </div>
+              <div>
+                <span>Core stack</span>
+                <p>Python, OpenCV, YOLOv11, C/C++, ESP32, Arduino UNO, Raspberry Pi 5</p>
+              </div>
+              <div>
+                <span>Contact</span>
+                <p>Quezon City, Philippines | <a href="tel:+639194850794">0919 485 0794</a> | <a href="mailto:kylesantos0411@gmail.com">kylesantos0411@gmail.com</a></p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact__grid">
+          <div class="contact__pitch fade-in">
+            <p class="section__eyebrow">Contact</p>
+            <h2 class="section__title">Ready for embedded systems, AI, and engineering project conversations.</h2>
+            <p class="section__copy">
+              If you are hiring near electronics, embedded systems, AI computer vision,
+              automation, environmental monitoring, or hardware-software prototyping, this is the
+              direction I want to grow in.
+            </p>
+
+            <div class="contact__actions">
+              <a href="mailto:kylesantos0411@gmail.com" class="btn btn--primary">Send Email</a>
+              <a href="tel:+639194850794" class="btn btn--secondary">Call Kyle</a>
+              <a href="https://www.linkedin.com/in/santos-kyle-a-14287b349" target="_blank" rel="noreferrer" class="btn btn--secondary">
+                Open LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__panel fade-in">
+            <a href="mailto:kylesantos0411@gmail.com" class="contact-card">
+              <span class="contact-card__label">Email</span>
+              <strong>kylesantos0411@gmail.com</strong>
+              <span>Best for direct opportunities and resume requests.</span>
+            </a>
+
+            <a href="tel:+639194850794" class="contact-card">
+              <span class="contact-card__label">Phone</span>
+              <strong>0919 485 0794</strong>
+              <span>For direct calls or SMS about opportunities.</span>
+            </a>
+
+            <a href="https://github.com/kylesantos0411" target="_blank" rel="noreferrer" class="contact-card">
+              <span class="contact-card__label">GitHub</span>
+              <strong>github.com/kylesantos0411</strong>
+              <span>Source code, commit history, and project details.</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/santos-kyle-a-14287b349" target="_blank" rel="noreferrer" class="contact-card">
+              <span class="contact-card__label">LinkedIn</span>
+              <strong>linkedin.com/in/santos-kyle-a-14287b349</strong>
+              <span>Professional profile and networking contact.</span>
+            </a>
+
+            <div class="contact-card contact-card--buttonless">
+              <span class="contact-card__label">Quick action</span>
+              <strong>Copy my email</strong>
+              <span>Useful when recruiters want to move fast.</span>
+              <button type="button" class="btn btn--ghost" id="copyEmailButton">Copy email address</button>
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="contact__form">
-          <form id="contactForm">
-            <div class="form__group">
-              <label class="form__label" for="name">Name</label>
-              <input type="text" class="form__input" id="name" name="name" required>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="email">Email</label>
-              <input type="email" class="form__input" id="email" name="email" required>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="subject">Subject</label>
-              <input type="text" class="form__input" id="subject" name="subject" required>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="message">Message</label>
-              <textarea class="form__textarea" id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary" style="width: 100%;">
-              Send Message
-            </button>
-            <div class="form__status" id="formStatus"></div>
-          </form>
-        </div>
+    <footer class="footer">
+      <div class="container footer__content">
+        <p><span id="currentYear">2026</span> Kyle Santos. Portfolio built around embedded systems, AI computer vision, and real engineering evidence.</p>
+        <a href="#top" class="footer__link">Back to top</a>
       </div>
-    </div>
-  </section>
+    </footer>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__content">
-      <p class="footer__text">
-        &copy; 2026 Kai. Crafted with ☕ and Python.
-      </p>
-      <div class="footer__links">
-        <a href="#hero" class="footer__link">Back to top ↑</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
-  <script src="js/contact.js"></script>
 </body>
-
 </html>

@@ -1,244 +1,386 @@
-/**
- * Main JavaScript - Core functionality
- * Theme toggle, animations, navigation, typing effect
- */
+const themeToggle = document.getElementById("themeToggle");
+const mobileToggle = document.getElementById("mobileToggle");
+const navLinks = document.getElementById("navLinks");
+const navbar = document.getElementById("navbar");
+const typingText = document.getElementById("typingText");
+const codeBg = document.getElementById("codeBg");
+const copyEmailButton = document.getElementById("copyEmailButton");
+const scrollProgress = document.getElementById("scrollProgress");
+const currentYear = document.getElementById("currentYear");
+const featurePopout = document.getElementById("featurePopout");
+const portfolioSidebar = document.getElementById("portfolioSidebar");
 
-// ============================================
-// THEME TOGGLE
-// ============================================
-const themeToggle = document.getElementById('themeToggle');
-const sunIcon = themeToggle.querySelector('.sun-icon');
-const moonIcon = themeToggle.querySelector('.moon-icon');
-
-// Check for saved theme preference or default to dark
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
-updateThemeIcons(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcons(newTheme);
-});
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function updateThemeIcons(theme) {
-    if (theme === 'dark') {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-    } else {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-    }
+  if (!themeToggle) {
+    return;
+  }
+
+  const sunIcon = themeToggle.querySelector(".sun-icon");
+  const moonIcon = themeToggle.querySelector(".moon-icon");
+
+  if (!sunIcon || !moonIcon) {
+    return;
+  }
+
+  if (theme === "dark") {
+    sunIcon.style.display = "block";
+    moonIcon.style.display = "none";
+  } else {
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "block";
+  }
 }
 
-// ============================================
-// MOBILE NAVIGATION
-// ============================================
-const mobileToggle = document.getElementById('mobileToggle');
-const navLinks = document.getElementById('navLinks');
+function initializeTheme() {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  updateThemeIcons(savedTheme);
 
-mobileToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileToggle.classList.toggle('active');
-});
+  if (!themeToggle) {
+    return;
+  }
 
-// Close mobile menu when clicking a link
-navLinks.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileToggle.classList.remove('active');
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    updateThemeIcons(nextTheme);
+  });
+}
+
+function initializeNavigation() {
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      mobileToggle.classList.toggle("active");
     });
-});
 
-// ============================================
-// NAVBAR SCROLL EFFECT
-// ============================================
-const navbar = document.getElementById('navbar');
-let lastScroll = 0;
+    navLinks.querySelectorAll(".nav__link").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        mobileToggle.classList.remove("active");
+      });
+    });
+  }
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+  const sectionLinks = document.querySelectorAll(".nav__link");
+  const sections = document.querySelectorAll("section[id]:not([hidden])");
 
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = 'none';
+  const onScroll = () => {
+    if (scrollProgress) {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress =
+        scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+
+      scrollProgress.style.width = `${Math.min(progress, 100)}%`;
     }
 
-    lastScroll = currentScroll;
-});
-
-// ============================================
-// TYPING ANIMATION
-// ============================================
-const typingText = document.getElementById('typingText');
-const phrases = [
-    'Automating the Future, One Script at a Time',
-    'Python Developer & AI Enthusiast',
-    'Building Smart Solutions',
-    'Electronics Hobbyist & Maker'
-];
-
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 80;
-
-function typeWriter() {
-    const currentPhrase = phrases[phraseIndex];
-
-    if (isDeleting) {
-        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 40;
-    } else {
-        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 80;
+    if (navbar) {
+      navbar.classList.toggle("nav--scrolled", window.scrollY > 24);
     }
 
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        // Pause at end of phrase
-        typingSpeed = 2000;
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typingSpeed = 500;
-    }
+    const scrollPosition = window.scrollY + 140;
 
-    setTimeout(typeWriter, typingSpeed);
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const bottom = top + section.offsetHeight;
+      const id = section.getAttribute("id");
+
+      if (scrollPosition >= top && scrollPosition < bottom) {
+        sectionLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  };
+
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 }
 
-// Start typing animation
-setTimeout(typeWriter, 1000);
+function initializeSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const href = anchor.getAttribute("href");
 
-// ============================================
-// CODE BACKGROUND ANIMATION
-// ============================================
-const codeBg = document.getElementById('codeBg');
+      if (!href || href === "#") {
+        return;
+      }
 
-const codeSnippets = [
-    'def automate():',
-    '    while True:',
-    '        solve_problem()',
-    'import asyncio',
-    'async def main():',
-    '    await process()',
-    'class AI:',
-    '    def __init__(self):',
-    '        self.learn()',
-    'for i in range(∞):',
-    '    code()',
-    '    coffee()',
-    '@decorator',
-    'def transform(data):',
-    '    return magic(data)',
-    'try:',
-    '    innovate()',
-    'except:',
-    '    iterate()',
-    'if __name__:',
-    '    run()',
-];
+      const target = document.querySelector(href);
 
-// Generate code background
-function generateCodeBackground() {
-    let html = '';
-    for (let i = 0; i < 50; i++) {
-        const snippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-        html += snippet + '<br>';
-    }
-    codeBg.innerHTML = html;
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const offset = target.getBoundingClientRect().top + window.scrollY - 84;
+
+      window.scrollTo({
+        top: offset,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  });
 }
 
-generateCodeBackground();
+function initializeTyping() {
+  if (!typingText) {
+    return;
+  }
 
-// ============================================
-// SCROLL ANIMATIONS (Intersection Observer)
-// ============================================
-const fadeElements = document.querySelectorAll('.fade-in');
+  const phrases = [
+    "AI-powered microplastic detection with Raspberry Pi",
+    "embedded systems using ESP32, Arduino, and sensors",
+    "YOLOv11 computer vision for real-world inspection",
+    "hardware-software prototypes with testable results",
+  ];
 
-const fadeObserverOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+  if (prefersReducedMotion) {
+    typingText.textContent = phrases[0];
+    return;
+  }
 
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  let phraseIndex = 0;
+  let characterIndex = 0;
+  let deleting = false;
+
+  const type = () => {
+    const phrase = phrases[phraseIndex];
+    typingText.textContent = deleting
+      ? phrase.slice(0, characterIndex--)
+      : phrase.slice(0, characterIndex++);
+
+    let delay = deleting ? 35 : 65;
+
+    if (!deleting && characterIndex > phrase.length) {
+      deleting = true;
+      delay = 1800;
+    } else if (deleting && characterIndex < 0) {
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      characterIndex = 0;
+      delay = 450;
+    }
+
+    window.setTimeout(type, delay);
+  };
+
+  type();
+}
+
+function initializeBackgroundTrace() {
+  if (!codeBg) {
+    return;
+  }
+
+  const snippets = [
+    "RPI5 :: CAPTURE -> ANALYZE -> REPORT",
+    "MICROTECT :: AI + HARDWARE",
+    "YOLOV11 :: FIBERS + FRAGMENTS",
+    "I2C / SPI / UART / GPIO",
+    "signal quality matters",
+    "frontend explains the system",
+    "detect -> verify -> document",
+    "prototype, measure, refine",
+    "YOLO + touch UI + hardware loop",
+    "PCB thinking meets product thinking",
+    "design for operators and teammates",
+    "mobile app with calm UX",
+    "searchable electronics knowledge base",
+    "clear handoff beats mystery",
+  ];
+
+  codeBg.innerHTML = Array.from({ length: 42 }, (_, index) => {
+    return `${String(index + 1).padStart(2, "0")} :: ${snippets[index % snippets.length]}`;
+  }).join("<br>");
+}
+
+function initializeRevealAnimations() {
+  const revealElements = document.querySelectorAll(".fade-in");
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            fadeObserver.unobserve(entry.target);
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
-    });
-}, fadeObserverOptions);
+      });
+    },
+    { threshold: 0.12 },
+  );
 
-fadeElements.forEach(element => {
-    fadeObserver.observe(element);
-});
-
-// ============================================
-// ACTIVE NAV LINK ON SCROLL
-// ============================================
-const sections = document.querySelectorAll('section[id]');
-const navLinksAll = document.querySelectorAll('.nav__link');
-
-function highlightNavOnScroll() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinksAll.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
+  revealElements.forEach((element) => observer.observe(element));
 }
 
-window.addEventListener('scroll', highlightNavOnScroll);
+function initializeCopyEmail() {
+  if (!copyEmailButton) {
+    return;
+  }
 
-// ============================================
-// SMOOTH SCROLL FOR ANCHOR LINKS
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 70;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
+  copyEmailButton.addEventListener("click", async () => {
+    const email = "kylesantos0411@gmail.com";
+    const originalLabel = copyEmailButton.textContent;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      copyEmailButton.textContent = "Copied";
+    } catch (error) {
+      copyEmailButton.textContent = email;
+      console.error("Could not copy email.", error);
+    }
+
+    window.setTimeout(() => {
+      copyEmailButton.textContent = originalLabel;
+    }, 1800);
+  });
+}
+
+function initializeCurrentYear() {
+  if (!currentYear) {
+    return;
+  }
+
+  currentYear.textContent = String(new Date().getFullYear());
+}
+
+function initializeFeaturePopouts() {
+  if (!featurePopout) {
+    return;
+  }
+
+  const openButtons = document.querySelectorAll("[data-feature-open]");
+  const closeButtons = document.querySelectorAll("[data-feature-close]");
+  const panel = featurePopout.querySelector(".feature-popout__panel");
+  const contents = featurePopout.querySelectorAll("[data-feature-content]");
+  const closeButton = featurePopout.querySelector(".feature-popout__close");
+
+  const closeFeature = () => {
+    featurePopout.hidden = true;
+    document.body.classList.remove("feature-popout-open");
+  };
+
+  const openFeature = (featureName) => {
+    let activeContent = null;
+
+    contents.forEach((content) => {
+      const isActive = content.dataset.featureContent === featureName;
+
+      content.hidden = !isActive;
+      content.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        activeContent = content;
+      }
     });
-});
 
-// ============================================
-// CONSOLE EASTER EGG
-// ============================================
-console.log(`
-%c╔═══════════════════════════════════════════╗
-║                                           ║
-║   👋 Hello, curious developer!            ║
-║                                           ║
-║   Looking under the hood?                 ║
-║   That's the spirit!                      ║
-║                                           ║
-║   Let's connect:                          ║
-║   → GitHub: github.com/yourusername      ║
-║   → LinkedIn: linkedin.com/in/username   ║
-║                                           ║
-╚═══════════════════════════════════════════╝
-`, 'color: #6366f1; font-family: monospace;');
+    if (!activeContent) {
+      return;
+    }
+
+    const heading = activeContent.querySelector("h2");
+
+    if (heading && panel) {
+      if (!heading.id) {
+        heading.id = `feature-popout-title-${featureName}`;
+      }
+
+      panel.setAttribute("aria-labelledby", heading.id);
+    }
+
+    featurePopout.hidden = false;
+    document.body.classList.add("feature-popout-open");
+    closeButton?.focus({ preventScroll: true });
+  };
+
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openFeature(button.dataset.featureOpen);
+    });
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeFeature);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !featurePopout.hidden) {
+      closeFeature();
+    }
+  });
+}
+
+function setPortfolioSidebarOpen(open) {
+  if (!portfolioSidebar) {
+    return;
+  }
+
+  portfolioSidebar.classList.toggle("is-open", open);
+  document.body.classList.toggle("portfolio-sidebar-open", open);
+
+  portfolioSidebar.querySelectorAll("[data-sidebar-toggle], [data-sidebar-search]").forEach((button) => {
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+
+function initializePortfolioSidebar() {
+  if (!portfolioSidebar) {
+    return;
+  }
+
+  setPortfolioSidebarOpen(false);
+
+  portfolioSidebar.querySelectorAll("[data-sidebar-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setPortfolioSidebarOpen(!portfolioSidebar.classList.contains("is-open"));
+    });
+  });
+
+  portfolioSidebar.querySelectorAll("[data-sidebar-search]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setPortfolioSidebarOpen(true);
+      window.setTimeout(() => {
+        document.getElementById("projectSearch")?.focus({ preventScroll: true });
+      }, 180);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && portfolioSidebar.classList.contains("is-open")) {
+      setPortfolioSidebarOpen(false);
+    }
+  });
+}
+
+initializeTheme();
+initializeNavigation();
+initializeSmoothScroll();
+initializeTyping();
+initializeBackgroundTrace();
+initializeRevealAnimations();
+initializeCopyEmail();
+initializeCurrentYear();
+initializePortfolioSidebar();
+initializeFeaturePopouts();
+
+console.log(
+  [
+    "Portfolio loaded for Kyle Santos",
+    "GitHub  : https://github.com/kylesantos0411",
+    "LinkedIn: https://www.linkedin.com/in/santos-kyle-a-14287b349",
+    "Email   : kylesantos0411@gmail.com",
+    "Focus   : embedded systems + AI computer vision",
+  ].join("\n"),
+);
