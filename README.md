@@ -1,115 +1,95 @@
-# Kyle Santos Portfolio
+# Kyle Santos — Embedded Systems & AI Engineer
 
-Resume-ready portfolio site for an electronics engineer and software builder.
+**Electronics Engineering graduate** from Marikina Polytechnic College, focused on building real hardware-software systems that work in the physical world.
 
-## Overview
+🌐 **Live portfolio:** [kylesantos0411.github.io/portfolio](https://kylesantos0411.github.io/portfolio/)
 
-This version of the site is designed to:
+---
 
-- follow the resume and portfolio flow from `document (1).md`
-- position Kyle as an embedded systems and AI computer vision candidate
-- present MICROTECT as the flagship capstone case study
-- organize each project by problem, solution, architecture, hardware, logic, results, and fixes
-- present a research-paper case study with 3D design and prototype evidence slots
-- organize project-based experience and skill groups in a resume-friendly format
-- keep project content maintainable through structured data
-- stay lightweight as a static site
+## About Me
 
-## Project Structure
+I build complete engineering systems — from circuit design and sensor integration to AI model training, detection UIs, and technical documentation. My strongest work sits at the intersection of embedded hardware, computer vision, and practical automation.
 
-```text
-PORTFOLIO/
-|-- index.html
-|-- resume.html
-|-- css/
-|   |-- resume.css
-|   `-- styles.css
-|-- assets/
-|   |-- images/
-|   |   `-- microtect/
-|   `-- papers/
-|       |-- kyle-santos-resume.pdf
-|       `-- microtect-final-paper.pdf
-|-- data/
-|   |-- electronics.json
-|   `-- projects.json
-|-- js/
-|   |-- main.js
-|   |-- project-data.mjs
-|   |-- projects.mjs
-|   `-- search.js
-|-- tests/
-|   `-- project-data.test.mjs
-`-- README.md
-```
+I am looking for **internships and junior engineering roles** in embedded systems, AI computer vision, electronics, and hardware-software prototyping. I am based in Quezon City, Philippines and open to both local and remote opportunities.
 
-## Local Preview
+**Core stack:** Python · OpenCV · YOLOv11 · C/C++ · ESP32 · Arduino UNO · Raspberry Pi 5
 
-Open `index.html` directly, or run a local server:
+---
 
-```bash
-py -m http.server 8000
-```
+## Featured Project — MICROTECT
 
-Then open `http://localhost:8000`.
+> Automated Optical Detector for Microplastics in Rock Salt
 
-## Update Content
+MICROTECT is my Electronics Engineering capstone project developed at Marikina Polytechnic College. It is a fully working hardware-software system that detects and quantifies microplastic particles in retail and domestic rock salt samples — replacing slow and inconsistent manual microscopy with an automated optical inspection workflow.
 
-### Projects
+**What the system does:**
+- Captures images of rock salt samples through a Raspberry Pi HQ camera module
+- Runs YOLOv11 object detection to identify and classify microplastic particles
+- Displays particle count, concentration (MP/g), confidence score, and contamination level on a touchscreen UI
+- Generates a PDF-style inspection report for documentation and repeatable review
 
-Edit `data/projects.json` to update:
+**Measured results:** 69.71% mean detection consistency · Precision 0.826 · Recall 0.733 · mAP@50 of 0.814
 
-- project names
-- summaries and impact statements
-- problem, solution, architecture, hardware, software logic, results, and challenges
-- tech stacks
-- featured status
-- GitHub links
+📄 [Read the final paper](https://kylesantos0411.github.io/portfolio/assets/papers/microtect-final-paper.pdf) · 🔗 [GitHub repo](https://github.com/kylesantos0411/MICROTECT)
 
-### Personal Details
+---
 
-Edit `index.html` and `resume.html` for:
+## Other Projects
 
-- hero/profile copy
-- research paper, prototype, experience, skills, and resume snapshot content
-- email address
-- education details
-- phone number
-- GitHub link
-- LinkedIn link
+### HerCare — Personal Care Mobile App
+A mobile companion app built with **React, TypeScript, Vite, Capacitor Android, and Firebase**. Designed around gentle daily support: shift reminders, wellness tracking, meal logs, partner check-ins, and focus sessions. Demonstrates frontend structure, reusable component design, app packaging, and product thinking.
 
-### Resume PDF
+🔗 [GitHub repo](https://github.com/kylesantos0411/HerCare)
 
-Open `resume.html`, then use the `Print or Save PDF` button. The resume is designed
-as two print pages. The generated PDF used by the portfolio buttons is stored at
-`assets/papers/kyle-santos-resume.pdf`.
+---
 
-### MICROTECT Assets
+### ESP32 Remote Monitoring System
+Real-time environmental monitoring using motion, temperature, and smoke sensors integrated with an LCD interface. Practiced threshold logic, modular sensor testing, and validated each component before full system integration.
 
-The MICROTECT paper and visuals are stored in:
+---
 
-- `assets/papers/microtect-final-paper.pdf`
-- `assets/papers/kyle-santos-resume.pdf`
-- `assets/images/microtect/microtect-3d-render-transparent.png`
-- `assets/images/microtect/microtect-detection-ui.png`
-- `assets/images/microtect/microtect-3d-perspective.jpg`
-- `assets/images/microtect/microtect-3d-front.jpg`
-- `assets/images/microtect/microtect-3d-cutaway.jpg`
+### Smart Pet Feeder
+Automated feeding mechanism using ultrasonic and LDR sensors, servo motor control, buzzer alerts, and OLED status display. Coordinated sensing, actuation, timing, and user feedback in one physical prototype.
 
-### Electronics Lab
+---
 
-Edit `data/electronics.json` to expand the searchable electronics reference.
+### Autonomous Maze-Solving Robot
+Autonomous navigation robot using IR sensing, ultrasonic sensing, motor control, and left/right-hand rule maze-solving algorithms. Integrated Bluetooth manual override via MIT App Inventor.
 
-## Tests
+---
 
-Run the project-data checks with:
+### VLAN Network Configuration (Cisco Packet Tracer)
+Designed a multi-VLAN network with traffic segmentation, inter-VLAN routing, and validated communication paths using Cisco Packet Tracer simulation.
 
-```bash
-node tests/project-data.test.mjs
-```
+---
 
-## Notes
+## Skills at a Glance
 
-- The project cards are rendered from `data/projects.json` by `js/projects.mjs`.
-- The electronics search is powered by `data/electronics.json` and `js/search.js`.
-- The portfolio resume buttons open `assets/papers/kyle-santos-resume.pdf`, generated from `resume.html`.
+| Area | Details |
+|---|---|
+| **Programming** | Python, C/C++, JavaScript, TypeScript |
+| **Embedded Systems** | ESP32, Arduino UNO, Raspberry Pi 5, GPIO, sensors, motor control |
+| **AI & Computer Vision** | YOLOv11, OpenCV, dataset annotation, model training, detection UI |
+| **Mobile & Web** | React, Vite, Capacitor Android, Firebase, HTML/CSS |
+| **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
+| **Tools** | VS Code, Arduino IDE, EasyEDA, Cisco Packet Tracer, Roboflow, Tinkercad, Wokwi |
+
+---
+
+## Education
+
+**Bachelor of Science in Electronics Engineering**
+Marikina Polytechnic College — Graduated 2026
+
+**Affiliations:**
+- Institute of Electronics Engineers of the Philippines, Student Member
+- Electronics Engineering Student Society, Member
+
+---
+
+## Contact
+
+- 📧 [kylesantos0411@gmail.com](mailto:kylesantos0411@gmail.com)
+- 📞 [0919 485 0794](tel:+639194850794)
+- 💼 [LinkedIn](https://www.linkedin.com/in/santos-kyle-a-14287b349)
+- 🐙 [GitHub](https://github.com/kylesantos0411)
