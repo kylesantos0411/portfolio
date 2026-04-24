@@ -20,7 +20,7 @@ I am looking for **internships and junior engineering roles** in embedded system
 
 > Automated Optical Detector for Microplastics in Rock Salt
 
-MICROTECT is my Electronics Engineering capstone project developed at Marikina Polytechnic College. It is a fully working hardware-software system that detects and quantifies microplastic particles in retail and domestic rock salt samples — replacing slow and inconsistent manual microscopy with an automated optical inspection workflow.
+MICROTECT is my Electronics Engineering capstone project developed at Marikina Polytechnic College. It is a fully working hardware-software system that detects and quantifies microplastic particles in retail and domestic rock salt samples replacing slow and inconsistent manual microscopy with an automated optical inspection workflow.
 
 **What the system does:**
 - Captures images of rock salt samples through a Raspberry Pi HQ camera module
