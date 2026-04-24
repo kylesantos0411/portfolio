@@ -2014,26 +2014,26 @@ button {
 }
 
 [data-theme="dark"] {
-  --bg-0: #111827;
-  --bg-1: #17202d;
-  --bg-2: #1f2937;
-  --bg-3: #263445;
-  --panel: #17202d;
-  --panel-strong: #17202d;
-  --text-0: #f9fafb;
-  --text-1: #d1d5db;
-  --text-2: #9ca3af;
-  --line: rgba(255, 255, 255, 0.14);
-  --line-strong: rgba(255, 255, 255, 0.24);
-  --accent: #5eead4;
-  --accent-soft: rgba(94, 234, 212, 0.08);
-  --signal: #5eead4;
-  --signal-soft: rgba(94, 234, 212, 0.08);
-  --cobalt: #93c5fd;
-  --warning: #fbbf24;
-  --field: rgba(255, 255, 255, 0.05);
-  --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.2);
-  --shadow-card: none;
+  --bg-0: #0a0a0a;
+  --bg-1: #111111;
+  --bg-2: #1a1a1a;
+  --bg-3: #222222;
+  --panel: #111111;
+  --panel-strong: #161616;
+  --text-0: #f5f5f5;
+  --text-1: #c8c8c8;
+  --text-2: #888888;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.20);
+  --accent: #45c6a6;
+  --accent-soft: rgba(69, 198, 166, 0.10);
+  --signal: #45c6a6;
+  --signal-soft: rgba(69, 198, 166, 0.10);
+  --cobalt: #8eb4f8;
+  --warning: #f0b429;
+  --field: rgba(255, 255, 255, 0.04);
+  --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -2148,7 +2148,7 @@ body::after,
 }
 
 [data-theme="dark"] .nav--scrolled {
-  background: rgba(17, 24, 39, 0.96);
+  background: rgba(10, 10, 10, 0.96);
 }
 
 .nav__container {
