@@ -1,6 +1,6 @@
 # Kyle Santos — Embedded Systems & AI Engineer
 
-**Electronics Engineering graduate** from Marikina Polytechnic College, focused on building real hardware-software systems that work in the physical world.
+**Electronics Engineering graduate** from Marikina Polytechnic College, focused on building real hardware-software systems.
 
 🌐 **Live portfolio:** [kylesantos0411.github.io/portfolio](https://kylesantos0411.github.io/portfolio/)
 
@@ -8,7 +8,7 @@
 
 ## About Me
 
-I build complete engineering systems — from circuit design and sensor integration to AI model training, detection UIs, and technical documentation. My strongest work sits at the intersection of embedded hardware, computer vision, and practical automation.
+I build complete engineering systems from circuit design and sensor integration to AI model training, detection UIs, and technical documentation. My strongest work sits at the intersection of embedded hardware, computer vision, and practical automation.
 
 I am looking for **internships and junior engineering roles** in embedded systems, AI computer vision, electronics, and hardware-software prototyping. I am based in Quezon City, Philippines and open to both local and remote opportunities.
 
