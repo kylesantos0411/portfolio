@@ -14,3 +14,6 @@ Thumbs.db
 
 # Agent files (AI assistant configs - not for public repo)
 .agent/
+
+# Nested local repo; keep it out of the portfolio site repository
+PROJECTS/Wallet website/
