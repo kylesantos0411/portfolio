@@ -37,7 +37,7 @@ MICROTECT is my Electronics Engineering capstone project developed at Marikina P
 ## Other Projects
 
 ### HerCare — Personal Care Mobile App
-A mobile companion app built with **React, TypeScript, Vite, Capacitor Android, and Firebase**. Designed around gentle daily support: shift reminders, wellness tracking, meal logs, partner check-ins, and focus sessions. Demonstrates frontend structure, reusable component design, app packaging, and product thinking.
+A soft, supportive care companion app built with **React, TypeScript, Vite, Capacitor Android, and Supabase**. It brings together shift planning, wellness tracking, partner check-ins, and a gentle study timer in one calm mobile experience.
 
 🔗 [GitHub repo](https://github.com/kylesantos0411/HerCare)
 
@@ -48,18 +48,8 @@ Another app-focused build in the portfolio that reflects my shift into user-faci
 
 ---
 
-### ESP32 Remote Monitoring System
-Real-time environmental monitoring using motion, temperature, and smoke sensors integrated with an LCD interface. Practiced threshold logic, modular sensor testing, and validated each component before full system integration.
-
----
-
 ### Smart Pet Feeder
 Automated feeding mechanism using ultrasonic and LDR sensors, servo motor control, buzzer alerts, and OLED status display. Coordinated sensing, actuation, timing, and user feedback in one physical prototype.
-
----
-
-### Autonomous Maze-Solving Robot
-Autonomous navigation robot using IR sensing, ultrasonic sensing, motor control, and left/right-hand rule maze-solving algorithms. Integrated Bluetooth manual override via MIT App Inventor.
 
 ---
 
@@ -70,7 +60,7 @@ Autonomous navigation robot using IR sensing, ultrasonic sensing, motor control,
 | **Programming** | Python, C/C++, JavaScript, TypeScript |
 | **Embedded Systems** | ESP32, Arduino UNO, Raspberry Pi 5, GPIO, sensors, motor control |
 | **AI & Computer Vision** | YOLOv11, OpenCV, dataset annotation, model training, detection UI |
-| **Mobile & Web** | React, Vite, Capacitor Android, Firebase, HTML/CSS |
+| **Mobile & Web** | React, Vite, Capacitor Android, Supabase, HTML/CSS |
 | **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
 | **Tools** | VS Code, Arduino IDE, EasyEDA, Cisco Packet Tracer, Roboflow, Tinkercad, Wokwi |
 

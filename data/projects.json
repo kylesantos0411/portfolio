@@ -60,58 +60,6 @@
       }
     },
     {
-      "name": "ESP32-Based Remote Monitoring System",
-      "repo": "",
-      "year": 2026,
-      "priority": 20,
-      "updated": "Engineering build",
-      "category": "Embedded Systems",
-      "status": "Sensor monitoring build",
-      "featured": false,
-      "summary": "A real-time environmental monitoring system that combines motion, temperature, and smoke sensing with LCD-based feedback.",
-      "impact": "Shows embedded systems fundamentals: sensor integration, modular validation, and practical monitoring logic.",
-      "role": "Sensor integration, firmware logic, component testing",
-      "tech": [
-        "ESP32",
-        "Arduino C/C++",
-        "LCD display",
-        "Motion sensor",
-        "Temperature sensor",
-        "Smoke sensor"
-      ],
-      "highlights": [
-        "Integrated multiple sensors into one monitoring workflow",
-        "Displayed environmental readings through an LCD interface",
-        "Built and validated each sensor module before system integration"
-      ],
-      "details": {
-        "problem": "Small environments need low-cost monitoring for motion, temperature changes, and smoke conditions without relying on a full commercial system.",
-        "solution": "Use an ESP32-based controller to collect sensor readings, process environmental states, and present live status through a local display.",
-        "architecture": "Sensor inputs -> ESP32 firmware -> threshold and status logic -> LCD output and alert-ready state.",
-        "hardware": [
-          "ESP32",
-          "motion sensor",
-          "temperature sensor",
-          "smoke sensor",
-          "LCD module",
-          "breadboard wiring"
-        ],
-        "software": "Arduino-style firmware with modular sensor reads, threshold checks, serial debugging, and LCD status updates.",
-        "results": [
-          "Produced real-time display feedback from multiple sensors",
-          "Validated each sensor component independently before combined testing"
-        ],
-        "challenges": [
-          "Separated component tests to isolate wiring and reading issues",
-          "Kept firmware modular so each sensor could be debugged without breaking the full system"
-        ]
-      },
-      "posterEyebrow": "Remote monitoring",
-      "posterNote": "ESP32 | sensors | LCD feedback",
-      "kind": "embedded",
-      "links": {}
-    },
-    {
       "name": "Smart Pet Feeder System",
       "repo": "",
       "year": 2026,
@@ -172,95 +120,45 @@
       "category": "Software Product",
       "status": "Android-ready app",
       "featured": true,
-      "summary": "A care-focused companion app built for routine support, focus sessions, wellness tracking, and partner check-ins.",
-      "impact": "Shows product thinking, empathy in software design, frontend implementation, and the ability to turn a personal idea into a usable app.",
-      "role": "Product concept, frontend development, mobile UX, Android packaging",
+      "summary": "A soft, supportive care companion app built around shift planning, wellness tracking, partner check-ins, and a gentle study timer in one calm mobile experience.",
+      "impact": "Shows product thinking, empathy in software design, frontend implementation, and the ability to turn a personal care idea into a complete Android-ready app.",
+      "role": "Product concept, frontend development, mobile UX, Android packaging, and partner-sharing flow design",
       "tech": [
         "React",
         "TypeScript",
         "Vite",
         "Capacitor Android",
-        "Firebase",
+        "Supabase",
         "AI-assisted development"
       ],
       "highlights": [
-        "Designed around daily care routines, focus support, and simple wellness tracking",
-        "Built a clean mobile interface with reusable frontend components",
-        "Prepared the app for Android delivery using Capacitor"
+        "Combined shift planning, wellness tracking, partner check-ins, and a gentle study timer in one mobile flow",
+        "Built a calm interface with reusable screens, dark mode support, and supportive copy",
+        "Prepared the app for Android delivery with Capacitor plus Supabase-backed sharing and reminders"
       ],
       "details": {
-        "problem": "Busy school and life routines can make it hard for someone to track care habits, focus sessions, and small daily reminders in one gentle place.",
-        "solution": "Build a personal care companion app that organizes routines, wellness notes, focus tools, and partner-aware check-ins into a calm mobile experience.",
-        "architecture": "React frontend -> local/product state -> Firebase-backed sharing features -> Capacitor Android package.",
+        "problem": "Long and draining shifts can make it hard to keep up with care routines, study focus, and partner communication in one manageable place.",
+        "solution": "Build a soft, supportive care companion app that brings shift planning, wellness tracking, partner check-ins, and a gentle study timer together in one calm mobile experience.",
+        "architecture": "React frontend -> local and product state -> Supabase Auth and Postgres for partner sharing -> Capacitor Android package -> local notifications and reminder flows.",
         "hardware": [],
-        "software": "React and TypeScript interface built with Vite, packaged through Capacitor for Android, with Firebase used for app data and sharing-related flows.",
+        "software": "React 19 and TypeScript interface built with Vite, packaged through Capacitor for Android, with Supabase handling auth, partner sync, and reminder-related features.",
         "results": [
-          "Created a working care-focused mobile product",
-          "Practiced user-centered design through a real personal use case",
-          "Built experience with frontend architecture, state handling, and Android packaging"
+          "Created a working Android-ready care companion app",
+          "Covered core flows such as shift planning, wellness signals, partner sharing, and study support",
+          "Built experience with frontend architecture, state handling, notifications, and Android packaging"
         ],
         "challenges": [
-          "Kept the interface calm and simple instead of overloading it with features",
-          "Balanced emotional/personal context with practical app structure",
-          "Used AI-assisted coding and documentation support while checking implementation details"
+          "Kept the interface calm and simple instead of overloading it with too many features",
+          "Balanced emotional context with a practical app structure that still feels usable every day",
+          "Designed partner-aware sharing and reminder flows without losing the personal tone of the app"
         ]
       },
       "posterEyebrow": "Personal app",
-      "posterNote": "Care routines | focus support | Android",
+      "posterNote": "Shift planning | partner care | Android",
       "kind": "care",
       "links": {
         "github": "https://github.com/kylesantos0411/HerCare"
       }
-    },
-    {
-      "name": "Autonomous Line-Following and Maze-Solving Robot",
-      "repo": "",
-      "year": 2026,
-      "updated": "Robotics build",
-      "category": "Robotics",
-      "status": "Autonomous navigation",
-      "featured": false,
-      "summary": "A robot that follows lines, solves mazes with rule-based navigation, and supports Bluetooth manual override through MIT App Inventor.",
-      "impact": "Shows autonomous control logic, sensor-based navigation, and the ability to blend manual and automatic operation.",
-      "role": "Navigation logic, sensor integration, Bluetooth control flow",
-      "tech": [
-        "Arduino",
-        "IR sensors",
-        "Ultrasonic sensor",
-        "Bluetooth module",
-        "MIT App Inventor",
-        "Motor control"
-      ],
-      "highlights": [
-        "Implemented left-hand and right-hand rule algorithms",
-        "Used IR and ultrasonic sensors for path and obstacle awareness",
-        "Added Bluetooth control for manual override"
-      ],
-      "details": {
-        "problem": "Autonomous robots need reliable path detection and simple recovery options when maze conditions change.",
-        "solution": "Build a navigation robot that can follow lines, solve maze paths with rule-based algorithms, and accept manual override through Bluetooth.",
-        "architecture": "IR and ultrasonic sensing -> navigation algorithm -> motor control -> Bluetooth manual override path.",
-        "hardware": [
-          "IR sensors",
-          "ultrasonic sensor",
-          "motor driver",
-          "Bluetooth module",
-          "robot chassis"
-        ],
-        "software": "Line-following logic, left-hand and right-hand maze rules, obstacle response, motor direction control, and MIT App Inventor command handling.",
-        "results": [
-          "Demonstrated autonomous navigation behavior",
-          "Supported manual control when override was needed"
-        ],
-        "challenges": [
-          "Balanced sensor thresholds for reliable line detection",
-          "Added Bluetooth override to recover from edge cases during testing"
-        ]
-      },
-      "posterEyebrow": "Robotics",
-      "posterNote": "Maze solving | Bluetooth override | motor control",
-      "kind": "robotics",
-      "links": {}
     }
   ]
 }
