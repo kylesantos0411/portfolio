@@ -43,6 +43,11 @@ A mobile companion app built with **React, TypeScript, Vite, Capacitor Android, 
 
 ---
 
+### Tamar — App Project
+Another app-focused build in the portfolio that reflects my shift into user-facing product work alongside embedded and AI systems.
+
+---
+
 ### ESP32 Remote Monitoring System
 Real-time environmental monitoring using motion, temperature, and smoke sensors integrated with an LCD interface. Practiced threshold logic, modular sensor testing, and validated each component before full system integration.
 
@@ -55,11 +60,6 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 
 ### Autonomous Maze-Solving Robot
 Autonomous navigation robot using IR sensing, ultrasonic sensing, motor control, and left/right-hand rule maze-solving algorithms. Integrated Bluetooth manual override via MIT App Inventor.
-
----
-
-### VLAN Network Configuration (Cisco Packet Tracer)
-Designed a multi-VLAN network with traffic segmentation, inter-VLAN routing, and validated communication paths using Cisco Packet Tracer simulation.
 
 ---
 
@@ -79,7 +79,7 @@ Designed a multi-VLAN network with traffic segmentation, inter-VLAN routing, and
 ## Education
 
 **Bachelor of Science in Electronics Engineering**
-Marikina Polytechnic College — Graduated 2026
+Marikina Polytechnic College — Graduated July 2026
 
 **Affiliations:**
 - Institute of Electronics Engineers of the Philippines, Student Member

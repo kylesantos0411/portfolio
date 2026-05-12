@@ -11,7 +11,7 @@
       "featured": true,
       "summary": "An automated optical detection system for identifying microplastics in rock salt using computer vision and an embedded Raspberry Pi workflow.",
       "impact": "Positions the portfolio around real engineering systems that integrate AI, physical hardware, environmental monitoring, and operator-facing software.",
-      "role": "Capstone team leader, full-system developer, frontend UI/UX, backend processing logic, AI workflow, and hardware integration",
+      "role": "Capstone project lead, full-system developer, frontend UI/UX, backend processing logic, AI workflow, and hardware integration",
       "tech": [
         "Python",
         "OpenCV",
@@ -260,53 +260,6 @@
       "posterEyebrow": "Robotics",
       "posterNote": "Maze solving | Bluetooth override | motor control",
       "kind": "robotics",
-      "links": {}
-    },
-    {
-      "name": "VLAN Network Configuration",
-      "repo": "",
-      "year": 2026,
-      "updated": "Network simulation",
-      "category": "Computer Networks",
-      "status": "Cisco Packet Tracer",
-      "featured": false,
-      "summary": "A Packet Tracer network configuration project using VLAN segmentation and routing for structured inter-VLAN communication.",
-      "impact": "Adds networking fundamentals to the portfolio and shows system-level thinking beyond embedded hardware.",
-      "role": "Network design, VLAN configuration, routing validation",
-      "tech": [
-        "Cisco Packet Tracer",
-        "VLANs",
-        "Routing",
-        "Switch configuration",
-        "Network segmentation"
-      ],
-      "highlights": [
-        "Designed a multi-VLAN network for traffic segmentation",
-        "Configured routing for communication between VLANs",
-        "Validated connectivity in Cisco Packet Tracer"
-      ],
-      "details": {
-        "problem": "Flat networks can become harder to manage and less secure when all devices share the same traffic domain.",
-        "solution": "Segment the network into VLANs and configure routing so groups stay organized while still communicating when needed.",
-        "architecture": "End devices -> access switches -> VLAN segmentation -> router or Layer 3 routing -> validated inter-VLAN traffic.",
-        "hardware": [
-          "simulated switches",
-          "simulated router",
-          "end devices in Packet Tracer"
-        ],
-        "software": "Cisco Packet Tracer configuration with VLAN assignments, switch ports, routing setup, and connectivity tests.",
-        "results": [
-          "Created segmented traffic groups",
-          "Verified communication paths between configured VLANs"
-        ],
-        "challenges": [
-          "Checked port assignments and routing paths during validation",
-          "Used simulation testing to confirm the network behaved as designed"
-        ]
-      },
-      "posterEyebrow": "Networking",
-      "posterNote": "VLANs | routing | simulation",
-      "kind": "networking",
       "links": {}
     }
   ]
