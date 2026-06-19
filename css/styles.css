@@ -1770,9 +1770,9 @@ button {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  width: min(880px, calc(100vw - 2rem));
-  height: min(76vh, 700px);
+  grid-template-rows: auto auto auto;
+  width: min(1080px, calc(100vw - 2rem));
+  height: auto;
   max-height: calc(100dvh - 2rem);
   overflow: hidden;
   border: 1px solid var(--line-strong);
@@ -1853,18 +1853,23 @@ button {
 }
 
 .certificate-modal__viewer {
+  display: grid;
   min-height: 0;
+  place-items: center;
   padding: 0.75rem;
   background: var(--bg-2);
 }
 
-.certificate-modal__viewer iframe {
+.certificate-modal__viewer img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 190px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
+  object-fit: contain;
 }
 
 body.certificate-modal-open {
@@ -1893,7 +1898,7 @@ body.certificate-modal-open .portfolio-sidebar {
 
   .certificate-modal__dialog {
     width: calc(100vw - 1.3rem);
-    height: min(78vh, 660px);
+    height: auto;
     max-height: calc(100dvh - 1.3rem);
     border-radius: 13px;
   }
@@ -1914,6 +1919,10 @@ body.certificate-modal-open .portfolio-sidebar {
 
   .certificate-modal__viewer {
     padding: 0.5rem;
+  }
+
+  .certificate-modal__viewer img {
+    max-height: calc(100dvh - 230px);
   }
 }
 
