@@ -1649,32 +1649,34 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: var(--space-5);
+  align-items: start;
 }
 
 .credential-card {
   display: grid;
   gap: var(--space-5);
   padding: var(--space-6);
+  align-self: start;
 }
 
 .credential-card--primary {
-  grid-template-columns: 150px minmax(0, 1fr);
-  align-items: center;
+  grid-template-columns: 132px minmax(0, 1fr);
+  align-items: start;
   border-color: color-mix(in srgb, var(--signal) 45%, var(--line));
 }
 
 .credential-card__badge {
   display: grid;
-  min-height: 210px;
+  min-height: 176px;
   place-items: center;
-  padding: var(--space-4);
+  padding: var(--space-3);
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   background: linear-gradient(160deg, var(--signal-soft), var(--field));
 }
 
 .credential-card__badge img {
-  width: min(100%, 140px);
+  width: min(100%, 112px);
   height: auto;
 }
 
@@ -1704,6 +1706,9 @@ button {
 }
 
 .credential-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1rem;
   margin: var(--space-4) 0;
   padding-left: 1.1rem;
   color: var(--text-1);
@@ -1739,18 +1744,99 @@ button {
 }
 
 @media (max-width: 960px) {
-  .credentials__grid,
-  .credential-card--primary {
+  .credentials__grid {
     grid-template-columns: 1fr;
   }
 
-  .credential-card__badge {
-    min-height: 170px;
+  .credential-card--primary {
+    grid-template-columns: 132px minmax(0, 1fr);
   }
 }
 
 .contact-card {
   display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::after {
+  content: "↗";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--text-2);
+  font-size: 1rem;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-card:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.contact-card--buttonless::after {
+  display: none;
+}
+
+.contact-card__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--text-0);
+  background: var(--field);
+}
+
+.contact-card__icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-card .contact-card__icon--email {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.contact-card .contact-card__icon--phone {
+  color: var(--signal);
+  background: var(--signal-soft);
+}
+
+.contact-card .contact-card__icon--github {
+  color: var(--text-0);
+}
+
+.contact-card__icon--github svg,
+.contact-card__icon--linkedin svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-card .contact-card__icon--linkedin {
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.1);
+}
+
+.contact-card .contact-card__icon--copy {
+  color: var(--cobalt);
+  background: color-mix(in srgb, var(--cobalt) 12%, transparent);
+}
+
+.contact-card__content {
+  display: grid;
+  min-width: 0;
   gap: var(--space-2);
 }
 
@@ -1766,12 +1852,57 @@ button {
   color: var(--text-1);
 }
 
-.contact-card__label {
+.contact-card .contact-card__label {
   color: var(--signal);
 }
 
 .contact-card--buttonless:hover {
   transform: none;
+}
+
+.contact-card--buttonless .btn {
+  width: fit-content;
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 560px) {
+  .credential-card--primary {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .credential-card__badge {
+    min-height: 132px;
+  }
+
+  .credential-card__badge img {
+    width: min(100%, 82px);
+  }
+
+  .credential-card ul {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-card h3 {
+    font-size: 1.28rem;
+  }
+
+  .contact-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .contact-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .contact-card__icon svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .empty-state {
