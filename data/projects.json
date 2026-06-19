@@ -169,24 +169,35 @@
       "category": "Software Product",
       "status": "In development",
       "featured": true,
-      "summary": "App project in progress. Details coming soon.",
-      "impact": "Personal app project currently in development.",
-      "role": "Full development",
-      "tech": [],
+      "summary": "A cross-platform bill-splitting app in development for sharing expenses and keeping group balances clear.",
+      "impact": "Extends the portfolio into practical mobile software, shared data, and everyday financial coordination.",
+      "role": "Product concept, frontend development, Android packaging, and backend integration",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Capacitor Android",
+        "Supabase"
+      ],
       "highlights": [
-        "App project in progress"
+        "Built as a practical bill-splitting workflow for shared expenses",
+        "Uses Capacitor Android for cross-platform mobile deployment",
+        "Uses Supabase for real-time expense data sharing"
       ],
       "details": {
-        "problem": "Details coming soon.",
-        "solution": "Details coming soon.",
-        "architecture": "Details coming soon.",
+        "problem": "Shared expenses can become difficult to track when payments, participants, and balances are recorded in different places.",
+        "solution": "Create a mobile bill-splitting experience that keeps shared expense information organized and easy to review.",
+        "architecture": "React and TypeScript interface -> Vite application -> Capacitor Android package -> Supabase backend for shared expense data.",
         "hardware": [],
-        "software": "Details coming soon.",
+        "software": "React, TypeScript, Vite, Capacitor Android, and Supabase. The project remains in development and will receive full screenshots and documentation when complete.",
         "results": [],
-        "challenges": []
+        "challenges": [
+          "Designing a clear workflow for entering, sharing, and reviewing group expenses",
+          "Preparing the app for cross-platform deployment and real-time shared data"
+        ]
       },
-      "posterEyebrow": "App project",
-      "posterNote": "In progress | details coming soon",
+      "posterEyebrow": "Bill-splitting app",
+      "posterNote": "React | Capacitor Android | Supabase",
       "kind": "app",
       "links": {}
     }

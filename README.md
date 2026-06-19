@@ -8,7 +8,7 @@
 
 ## About Me
 
-I build complete engineering systems from circuit design and sensor integration to AI model training, detection UIs, and technical documentation. My strongest work sits at the intersection of embedded hardware, computer vision, and practical automation.
+I build complete engineering systems from circuit design and sensor integration to AI model training, cross-platform applications, enterprise workflow automation, and technical documentation.
 
 I am looking for **internships and junior engineering roles** in embedded systems, AI computer vision, electronics, and hardware-software prototyping. I am based in Quezon City, Philippines and open to both local and remote opportunities.
 
@@ -43,8 +43,8 @@ A soft, supportive care companion app built with **React, TypeScript, Vite, Capa
 
 ---
 
-### Tamar — App Project
-Another app-focused build in the portfolio that reflects my shift into user-facing product work alongside embedded and AI systems.
+### KKB Snap — Bill-Splitting App
+A cross-platform mobile app in development using React, TypeScript, Vite, Capacitor Android, and Supabase for shared expense data.
 
 ---
 
@@ -63,6 +63,7 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 | **Mobile & Web** | React, Vite, Capacitor Android, Supabase, HTML/CSS |
 | **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
 | **Tools** | VS Code, Arduino IDE, EasyEDA, Cisco Packet Tracer, Roboflow, Tinkercad, Wokwi |
+| **Workflow Automation** | ServiceNow, Knowledge Management, Platform Analytics, Service Catalog, Visual Task Boards |
 
 ---
 
@@ -73,7 +74,6 @@ Marikina Polytechnic College — Graduated July 2026
 
 **Affiliations:**
 - Institute of Electronics Engineers of the Philippines, Student Member
-- Electronics Engineering Student Society, Member
 
 ---
 
