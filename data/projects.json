@@ -159,6 +159,36 @@
       "links": {
         "github": "https://github.com/kylesantos0411/HerCare"
       }
+    },
+    {
+      "name": "KKB Snap",
+      "repo": "",
+      "year": 2026,
+      "priority": 3,
+      "updated": "In progress",
+      "category": "Software Product",
+      "status": "In development",
+      "featured": true,
+      "summary": "App project in progress. Details coming soon.",
+      "impact": "Personal app project currently in development.",
+      "role": "Full development",
+      "tech": [],
+      "highlights": [
+        "App project in progress"
+      ],
+      "details": {
+        "problem": "Details coming soon.",
+        "solution": "Details coming soon.",
+        "architecture": "Details coming soon.",
+        "hardware": [],
+        "software": "Details coming soon.",
+        "results": [],
+        "challenges": []
+      },
+      "posterEyebrow": "App project",
+      "posterNote": "In progress | details coming soon",
+      "kind": "app",
+      "links": {}
     }
   ]
 }
