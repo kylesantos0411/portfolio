@@ -30,7 +30,7 @@ MICROTECT is my Electronics Engineering capstone project developed at Marikina P
 
 **Measured results:** 69.71% mean detection consistency · Precision 0.826 · Recall 0.733 · mAP@50 of 0.814
 
-📄 [Read the final paper](https://kylesantos0411.github.io/portfolio/assets/papers/microtect-final-paper.pdf) · 🔗 [GitHub repo](https://github.com/kylesantos0411/MICROTECT)
+📄 [Read the final paper](https://kylesantos0411.github.io/portfolio/assets/papers/microtect-research-paper-may-2026.pdf) · 🔗 [GitHub repo](https://github.com/kylesantos0411/MICROTECT)
 
 ---
 
