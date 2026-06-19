@@ -1645,6 +1645,110 @@ button {
   overflow-wrap: anywhere;
 }
 
+.credentials__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-5);
+}
+
+.credential-card {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-6);
+}
+
+.credential-card--primary {
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  border-color: color-mix(in srgb, var(--signal) 45%, var(--line));
+}
+
+.credential-card__badge {
+  display: grid;
+  min-height: 210px;
+  place-items: center;
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: linear-gradient(160deg, var(--signal-soft), var(--field));
+}
+
+.credential-card__badge img {
+  width: min(100%, 140px);
+  height: auto;
+}
+
+.credential-card__content {
+  min-width: 0;
+}
+
+.credential-card__status {
+  color: var(--signal);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.credential-card h3 {
+  margin: 0.45rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.credential-card p {
+  margin: 0;
+  color: var(--text-1);
+}
+
+.credential-card ul {
+  margin: var(--space-4) 0;
+  padding-left: 1.1rem;
+  color: var(--text-1);
+}
+
+.credential-card__note {
+  margin-top: var(--space-4) !important;
+  padding: var(--space-4);
+  border-left: 3px solid var(--cobalt);
+  background: var(--field);
+}
+
+.credential-card__evidence-link {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: #ffffff;
+}
+
+.credential-card__evidence-link img {
+  width: 100%;
+  height: auto;
+}
+
+.credential-card__evidence-link span {
+  display: block;
+  padding: 0.7rem 0.85rem;
+  border-top: 1px solid var(--line);
+  background: var(--panel-strong);
+  color: var(--signal);
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .credentials__grid,
+  .credential-card--primary {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-card__badge {
+    min-height: 170px;
+  }
+}
+
 .contact-card {
   display: grid;
   gap: var(--space-2);
