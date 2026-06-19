@@ -9,6 +9,7 @@ const scrollProgress = document.getElementById("scrollProgress");
 const currentYear = document.getElementById("currentYear");
 const featurePopout = document.getElementById("featurePopout");
 const portfolioSidebar = document.getElementById("portfolioSidebar");
+const certificateModal = document.getElementById("certificateModal");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -322,6 +323,78 @@ function initializeFeaturePopouts() {
   });
 }
 
+function initializeCertificateModal() {
+  if (!certificateModal) {
+    return;
+  }
+
+  const openButtons = document.querySelectorAll("[data-certificate-open]");
+  const closeButtons = certificateModal.querySelectorAll("[data-certificate-close]");
+  const closeButton = certificateModal.querySelector(".certificate-modal__close");
+  const frame = certificateModal.querySelector("[data-certificate-frame]");
+  const certificateUrl = "assets/papers/servicenow-micro-certification-flows.pdf#view=FitH";
+  let lastFocusedElement = null;
+  let closeTimer = null;
+
+  const finishClose = () => {
+    certificateModal.hidden = true;
+
+    if (frame) {
+      frame.removeAttribute("src");
+    }
+
+    lastFocusedElement?.focus({ preventScroll: true });
+  };
+
+  const closeCertificate = () => {
+    if (certificateModal.hidden) {
+      return;
+    }
+
+    certificateModal.classList.remove("is-open");
+    document.body.classList.remove("certificate-modal-open");
+    window.clearTimeout(closeTimer);
+
+    if (prefersReducedMotion) {
+      finishClose();
+      return;
+    }
+
+    closeTimer = window.setTimeout(finishClose, 220);
+  };
+
+  const openCertificate = (button) => {
+    window.clearTimeout(closeTimer);
+    lastFocusedElement = button;
+
+    if (frame && !frame.getAttribute("src")) {
+      frame.setAttribute("src", certificateUrl);
+    }
+
+    certificateModal.hidden = false;
+    document.body.classList.add("certificate-modal-open");
+
+    window.requestAnimationFrame(() => {
+      certificateModal.classList.add("is-open");
+      closeButton?.focus({ preventScroll: true });
+    });
+  };
+
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => openCertificate(button));
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeCertificate);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !certificateModal.hidden) {
+      closeCertificate();
+    }
+  });
+}
+
 function setPortfolioSidebarOpen(open) {
   if (!portfolioSidebar) {
     return;
@@ -374,6 +447,7 @@ initializeCopyEmail();
 initializeCurrentYear();
 initializePortfolioSidebar();
 initializeFeaturePopouts();
+initializeCertificateModal();
 
 console.log(
   [
