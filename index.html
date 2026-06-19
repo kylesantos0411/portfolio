@@ -402,6 +402,57 @@
       </section>
     </div>
 
+    <div class="certificate-modal" id="certificateModal" hidden>
+      <button
+        type="button"
+        class="certificate-modal__scrim"
+        data-certificate-close
+        aria-label="Close certificate preview"
+      ></button>
+
+      <section
+        class="certificate-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="certificateModalTitle"
+      >
+        <header class="certificate-modal__header">
+          <div>
+            <span class="certificate-modal__eyebrow">Verified credential</span>
+            <h2 id="certificateModalTitle">ServiceNow Micro-Certification - Flows</h2>
+          </div>
+
+          <button
+            type="button"
+            class="certificate-modal__close"
+            data-certificate-close
+            aria-label="Close certificate preview"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+
+        <div class="certificate-modal__viewer">
+          <iframe
+            title="ServiceNow Micro-Certification - Flows certificate"
+            data-certificate-frame
+          ></iframe>
+        </div>
+
+        <footer class="certificate-modal__footer">
+          <span>Issued June 19, 2026</span>
+          <a
+            href="assets/papers/servicenow-micro-certification-flows.pdf"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn--secondary"
+          >
+            Open full document
+          </a>
+        </footer>
+      </section>
+    </div>
+
     <header class="hero section" id="top">
       <div class="hero__trace" id="codeBg" aria-hidden="true"></div>
 
@@ -515,14 +566,13 @@
                   <li>Create a Flow</li>
                   <li>Create a Subflow</li>
                 </ul>
-                <a
-                  href="assets/papers/servicenow-micro-certification-flows.pdf"
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  type="button"
                   class="btn btn--primary"
+                  data-certificate-open
                 >
                   View Certificate
-                </a>
+                </button>
               </div>
             </article>
 
