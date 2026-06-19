@@ -78,6 +78,16 @@ Marikina Polytechnic College — Graduated July 2026
 
 ---
 
+## Credentials
+
+- **ServiceNow Micro-Certification - Flows** — issued June 19, 2026
+- Completed ServiceNow Flow Fundamentals, Create a Flow, Create a Subflow, and administration learning badges
+- Continuing preparation for the ServiceNow Certified System Administrator credential
+
+[View certificate](https://kylesantos0411.github.io/portfolio/assets/papers/servicenow-micro-certification-flows.pdf)
+
+---
+
 ## Contact
 
 - 📧 [kylesantos0411@gmail.com](mailto:kylesantos0411@gmail.com)
