@@ -59,11 +59,12 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 |---|---|
 | **Programming** | Python, C/C++, JavaScript, TypeScript |
 | **Embedded Systems** | ESP32, Arduino UNO, Raspberry Pi 5, GPIO, sensors, motor control |
-| **AI & Computer Vision** | YOLOv11, OpenCV, dataset annotation, model training, detection UI |
+| **AI & Computer Vision** | YOLOv11, OpenCV, dataset annotation, model training, object detection, AI automation |
 | **Mobile & Web** | React, Vite, Capacitor Android, Supabase, HTML/CSS |
 | **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
 | **Tools** | VS Code, Antigravity IDE, Claude Code, Arduino IDE, Excel, Microsoft Office |
 | **Workflow Automation** | ServiceNow, Knowledge Management, Platform Analytics, Service Catalog, Visual Task Boards |
+| **API & Data** | JSON, AI/API-backed integrations, database management |
 
 ---
 
