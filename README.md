@@ -62,7 +62,7 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 | **AI & Computer Vision** | YOLOv11, OpenCV, dataset annotation, model training, detection UI |
 | **Mobile & Web** | React, Vite, Capacitor Android, Supabase, HTML/CSS |
 | **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
-| **Tools** | VS Code, Arduino IDE, EasyEDA, Cisco Packet Tracer, Roboflow, Tinkercad, Wokwi |
+| **Tools** | VS Code, Antigravity IDE, Claude Code, Arduino IDE, Excel, Microsoft Office |
 | **Workflow Automation** | ServiceNow, Knowledge Management, Platform Analytics, Service Catalog, Visual Task Boards |
 
 ---
