@@ -331,18 +331,11 @@ function initializeCertificateModal() {
   const openButtons = document.querySelectorAll("[data-certificate-open]");
   const closeButtons = certificateModal.querySelectorAll("[data-certificate-close]");
   const closeButton = certificateModal.querySelector(".certificate-modal__close");
-  const frame = certificateModal.querySelector("[data-certificate-frame]");
-  const certificateUrl = "assets/papers/servicenow-micro-certification-flows.pdf#view=FitH";
   let lastFocusedElement = null;
   let closeTimer = null;
 
   const finishClose = () => {
     certificateModal.hidden = true;
-
-    if (frame) {
-      frame.removeAttribute("src");
-    }
-
     lastFocusedElement?.focus({ preventScroll: true });
   };
 
@@ -366,10 +359,6 @@ function initializeCertificateModal() {
   const openCertificate = (button) => {
     window.clearTimeout(closeTimer);
     lastFocusedElement = button;
-
-    if (frame && !frame.getAttribute("src")) {
-      frame.setAttribute("src", certificateUrl);
-    }
 
     certificateModal.hidden = false;
     document.body.classList.add("certificate-modal-open");
