@@ -10,7 +10,7 @@
 
 I build complete engineering systems from circuit design and sensor integration to AI model training, cross-platform applications, enterprise workflow automation, and technical documentation.
 
-I am looking for **internships and junior engineering roles** in embedded systems, AI computer vision, electronics, and hardware-software prototyping. I am based in Quezon City, Philippines and open to both local and remote opportunities.
+I am looking for **internships and junior engineering roles** in embedded systems, AI computer vision, electronics, and hardware-software prototyping. I am based in San Mateo, Rizal, Philippines and open to both local and remote opportunities.
 
 **Core stack:** Python · OpenCV · YOLOv11 · C/C++ · ESP32 · Arduino UNO · Raspberry Pi 5
 
@@ -63,7 +63,7 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 | **Mobile & Web** | React, Vite, Capacitor Android, Supabase, HTML/CSS |
 | **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
 | **Tools** | VS Code, Antigravity IDE, Claude Code, Arduino IDE, Excel, Microsoft Office |
-| **Workflow Automation** | ServiceNow, Knowledge Management, Platform Analytics, Service Catalog, Visual Task Boards |
+| **Workflow Automation** | ServiceNow Basic Fundamentals, catalog-item creation, basic Flow Designer, system administration and navigation |
 | **API & Data** | JSON, AI/API-backed integrations, database management |
 
 ---
@@ -71,7 +71,14 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 ## Education
 
 **Bachelor of Science in Electronics Engineering**
-Marikina Polytechnic College — Graduated July 2026
+Marikina Polytechnic College — 2022 to Present
+
+## Internship
+
+**First Option Electronic System Phils., Inc.** — June 2025 to August 2025
+
+- Designed CCTV layouts and supported end-to-end surveillance operations
+- Coordinated control-room personnel and contributed to site-security efficiency
 
 **Affiliations:**
 - Institute of Electronics Engineers of the Philippines, Student Member
