@@ -43,8 +43,8 @@ A soft, supportive care companion app built with **React, TypeScript, Vite, Capa
 
 ---
 
-### KKB Snap — Bill-Splitting App
-A cross-platform mobile app in development using React, TypeScript, Vite, Capacitor Android, and Supabase for shared expense data.
+### KKB Snap — Receipt-Splitting App
+A cross-platform app in development using TypeScript, React Native, Expo, Supabase PostgreSQL, Realtime, and Mindee OCR for receipt scanning, live item claiming, proportional bill calculation, and payment QR handoff.
 
 ---
 
@@ -57,25 +57,30 @@ Automated feeding mechanism using ultrasonic and LDR sensors, servo motor contro
 
 | Area | Details |
 |---|---|
-| **Programming** | Python, C/C++, JavaScript, TypeScript |
+| **Programming** | Python, C/C++, JavaScript, TypeScript, React Native, SQL |
 | **Embedded Systems** | ESP32, Arduino UNO, Raspberry Pi 5, GPIO, sensors, motor control |
 | **AI & Computer Vision** | YOLOv11, OpenCV, dataset annotation, model training, object detection, AI automation |
-| **Mobile & Web** | React, Vite, Capacitor Android, Supabase, HTML/CSS |
+| **Mobile & Web** | React, React Native, Expo, Vite, Capacitor Android, Supabase, HTML/CSS |
 | **Electronics & Hardware** | Circuit design, MOSFET switching, TP4056 battery systems, DC-DC converters, LED control |
 | **Tools** | VS Code, Antigravity IDE, Claude Code, Arduino IDE, Excel, Microsoft Office |
 | **Workflow Automation** | ServiceNow Basic Fundamentals, catalog-item creation, basic Flow Designer, system administration and navigation |
-| **API & Data** | JSON, AI/API-backed integrations, database management |
+| **API & Data** | Supabase PostgreSQL, Realtime, JSON, AI/API-backed integrations, database management |
 
 ---
 
 ## Education
 
 **Bachelor of Science in Electronics Engineering**
-Marikina Polytechnic College — 2022 to Present
+Marikina Polytechnic College — June 2022 to July 2026
+
+- 1st Place, Engineering Capstone Project Exhibit (2026)
+- Participant, Research Innovation Congress (2026)
 
 ## Internship
 
 **First Option Electronic System Phils., Inc.** — June 2025 to August 2025
+
+Pasig City, Metro Manila, Philippines
 
 - Designed CCTV layouts and supported end-to-end surveillance operations
 - Coordinated control-room personnel and contributed to site-security efficiency
@@ -99,5 +104,5 @@ Marikina Polytechnic College — 2022 to Present
 
 - 📧 [kylesantos0411@gmail.com](mailto:kylesantos0411@gmail.com)
 - 📞 [0919 485 0794](tel:+639194850794)
-- 💼 [LinkedIn](https://www.linkedin.com/in/santos-kyle-a-14287b349)
+- 💼 [LinkedIn](https://www.linkedin.com/in/kyle-nero-santos-14287b349/)
 - 🐙 [GitHub](https://github.com/kylesantos0411)

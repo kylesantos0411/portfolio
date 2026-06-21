@@ -169,35 +169,36 @@
       "category": "Software Product",
       "status": "In development",
       "featured": true,
-      "summary": "A cross-platform bill-splitting app in development for sharing expenses and keeping group balances clear.",
-      "impact": "Extends the portfolio into practical mobile software, shared data, and everyday financial coordination.",
-      "role": "Product concept, frontend development, Android packaging, and backend integration",
+      "summary": "A cross-platform receipt-splitting app with receipt scanning, live item claiming, proportional bill calculation, and payment QR handoff.",
+      "impact": "Makes shared receipts easier to scan, divide, claim, calculate, and settle in real time.",
+      "role": "Product development, frontend implementation, OCR integration, and realtime backend integration",
       "tech": [
-        "React",
         "TypeScript",
-        "Vite",
-        "Capacitor Android",
-        "Supabase"
+        "React Native",
+        "Expo",
+        "Supabase PostgreSQL",
+        "Realtime",
+        "Mindee OCR"
       ],
       "highlights": [
-        "Built as a practical bill-splitting workflow for shared expenses",
-        "Uses Capacitor Android for cross-platform mobile deployment",
-        "Uses Supabase for real-time expense data sharing"
+        "Scans receipts with Mindee OCR",
+        "Supports live item claiming and proportional bill calculation",
+        "Provides payment QR handoff and real-time shared expense data"
       ],
       "details": {
-        "problem": "Shared expenses can become difficult to track when payments, participants, and balances are recorded in different places.",
-        "solution": "Create a mobile bill-splitting experience that keeps shared expense information organized and easy to review.",
-        "architecture": "React and TypeScript interface -> Vite application -> Capacitor Android package -> Supabase backend for shared expense data.",
+        "problem": "Manually entering receipt items, tracking claims, and calculating each person's share makes group payments slow and error-prone.",
+        "solution": "Scan the receipt, let participants claim items live, calculate proportional totals, and hand off payment through a QR flow.",
+        "architecture": "React Native and Expo interface -> Mindee OCR receipt extraction -> Supabase PostgreSQL and Realtime -> proportional calculation -> payment QR handoff.",
         "hardware": [],
-        "software": "React, TypeScript, Vite, Capacitor Android, and Supabase. The project remains in development and will receive full screenshots and documentation when complete.",
+        "software": "TypeScript, React Native, Expo, Supabase PostgreSQL, Realtime, and Mindee OCR. The project remains in development and will receive full screenshots and documentation when complete.",
         "results": [],
         "challenges": [
-          "Designing a clear workflow for entering, sharing, and reviewing group expenses",
-          "Preparing the app for cross-platform deployment and real-time shared data"
+          "Turning OCR output into a clean, editable receipt workflow",
+          "Synchronizing live item claims while keeping proportional totals accurate"
         ]
       },
       "posterEyebrow": "Bill-splitting app",
-      "posterNote": "React | Capacitor Android | Supabase",
+      "posterNote": "React Native | Expo | Supabase | Mindee OCR",
       "kind": "app",
       "links": {}
     }
