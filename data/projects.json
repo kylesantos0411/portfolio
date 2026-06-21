@@ -162,12 +162,12 @@
     },
     {
       "name": "KKB Snap",
-      "repo": "",
+      "repo": "kylesantos0411/KKB-Snap",
       "year": 2026,
       "priority": 3,
-      "updated": "In progress",
+      "updated": "June 2026",
       "category": "Software Product",
-      "status": "In development",
+      "status": "MVP",
       "featured": true,
       "summary": "A cross-platform receipt-splitting app with receipt scanning, live item claiming, proportional bill calculation, and payment QR handoff.",
       "impact": "Makes shared receipts easier to scan, divide, claim, calculate, and settle in real time.",
@@ -190,8 +190,12 @@
         "solution": "Scan the receipt, let participants claim items live, calculate proportional totals, and hand off payment through a QR flow.",
         "architecture": "React Native and Expo interface -> Mindee OCR receipt extraction -> Supabase PostgreSQL and Realtime -> proportional calculation -> payment QR handoff.",
         "hardware": [],
-        "software": "TypeScript, React Native, Expo, Supabase PostgreSQL, Realtime, and Mindee OCR. The project remains in development and will receive full screenshots and documentation when complete.",
-        "results": [],
+        "software": "TypeScript, React Native, Expo Router, Supabase Auth, PostgreSQL, Realtime, Edge Functions, and Mindee OCR.",
+        "results": [
+          "Built an end-to-end host and guest flow from authentication and receipt scanning through item claiming and settlement",
+          "Added realtime exclusive item claims, proportional tax and tip allocation, and centavo-exact reconciliation",
+          "Implemented GCash and Maya receive-QR handoff with fallback account details"
+        ],
         "challenges": [
           "Turning OCR output into a clean, editable receipt workflow",
           "Synchronizing live item claims while keeping proportional totals accurate"
@@ -200,7 +204,9 @@
       "posterEyebrow": "Bill-splitting app",
       "posterNote": "React Native | Expo | Supabase | Mindee OCR",
       "kind": "app",
-      "links": {}
+      "links": {
+        "github": "https://github.com/kylesantos0411/KKB-Snap"
+      }
     }
   ]
 }

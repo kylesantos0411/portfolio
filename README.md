@@ -44,7 +44,9 @@ A soft, supportive care companion app built with **React, TypeScript, Vite, Capa
 ---
 
 ### KKB Snap — Receipt-Splitting App
-A cross-platform app in development using TypeScript, React Native, Expo, Supabase PostgreSQL, Realtime, and Mindee OCR for receipt scanning, live item claiming, proportional bill calculation, and payment QR handoff.
+A cross-platform mobile MVP using TypeScript, React Native, Expo, Supabase PostgreSQL, Realtime, and Mindee OCR for receipt scanning, live item claiming, proportional bill calculation, and payment QR handoff.
+
+🔗 [GitHub repo](https://github.com/kylesantos0411/KKB-Snap)
 
 ---
 
