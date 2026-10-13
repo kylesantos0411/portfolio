@@ -204,8 +204,7 @@
       "posterNote": "Electron | React | Ollama | Google Gemma 3",
       "kind": "software",
       "links": {
-        "github": "https://github.com/kylesantos0411/SENTIA",
-        "notes": "PROJECTS/Sentia/# SENTIA - Local AI Chat Application (Ge.md"
+        "github": "https://github.com/kylesantos0411/SENTIA"
       }
     },
     {
@@ -257,7 +256,6 @@
       "kind": "app",
       "links": {
         "github": "https://github.com/kylesantos0411/log-pose-tcg",
-        "notes": "PROJECTS/Log Pose TCG/README.md",
         "live": "https://logposetcg.vercel.app"
       }
     },
@@ -314,8 +312,7 @@
       "posterNote": "NFC Cards | Google Reviews | Puppeteer scraper | Mobile web",
       "kind": "automation",
       "links": {
-        "github": "https://github.com/kylesantos0411/TapAndGo",
-        "notes": "PROJECTS/NFC Google Review Card/client-onboarding-template.txt"
+        "github": "https://github.com/kylesantos0411/TapAndGo"
       }
     },
     {

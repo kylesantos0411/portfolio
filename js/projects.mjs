@@ -218,7 +218,7 @@ function projectCardTemplate(project, index) {
     ? `<a class="inline-link" href="${escapeHtml(project.links.live)}" target="_blank" rel="noreferrer">Live build</a>`
     : "";
 
-  const notesLink = project.links.notes
+  const notesLink = project.links.notes && project.name === "MICROTECT"
     ? `<a class="inline-link" href="${escapeHtml(project.links.notes)}" target="_blank" rel="noreferrer">Research paper</a>`
     : "";
 
