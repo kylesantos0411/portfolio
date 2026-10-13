@@ -177,16 +177,6 @@
             KKB Snap
           </button>
 
-          <button type="button" class="portfolio-sidebar__item" data-feature-open="pigeon-timer">
-            <span class="portfolio-sidebar__item-icon">
-              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"></circle>
-                <polyline points="12 7 12 12 15 15"></polyline>
-              </svg>
-            </span>
-            Pigeon Timer
-          </button>
-
           <button type="button" class="portfolio-sidebar__item" data-feature-open="sentia">
             <span class="portfolio-sidebar__item-icon">
               <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
@@ -195,27 +185,6 @@
               </svg>
             </span>
             SENTIA AI
-          </button>
-
-          <button type="button" class="portfolio-sidebar__item" data-feature-open="boost-vlog">
-            <span class="portfolio-sidebar__item-icon">
-              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-              </svg>
-            </span>
-            Boost Vlog
-          </button>
-
-          <button type="button" class="portfolio-sidebar__item" data-feature-open="sire-leather">
-            <span class="portfolio-sidebar__item-icon">
-              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-              </svg>
-            </span>
-            SIRE Leather
           </button>
 
           <button type="button" class="portfolio-sidebar__item" data-feature-open="log-pose-tcg">
@@ -275,21 +244,9 @@
             <strong>KKB Snap</strong>
             <span>Receipt-splitting app MVP</span>
           </button>
-          <button type="button" class="portfolio-sidebar__project" data-feature-open="pigeon-timer">
-            <strong>Pigeon Timer</strong>
-            <span>IoT gate & mobile app</span>
-          </button>
           <button type="button" class="portfolio-sidebar__project" data-feature-open="sentia">
             <strong>SENTIA</strong>
             <span>Offline AI desktop app</span>
-          </button>
-          <button type="button" class="portfolio-sidebar__project" data-feature-open="boost-vlog">
-            <strong>Boost Vlog</strong>
-            <span>AI video editor & pipeline</span>
-          </button>
-          <button type="button" class="portfolio-sidebar__project" data-feature-open="sire-leather">
-            <strong>SIRE Leather Studio</strong>
-            <span>Artisan e-commerce platform</span>
           </button>
           <button type="button" class="portfolio-sidebar__project" data-feature-open="log-pose-tcg">
             <strong>Log Pose TCG</strong>
@@ -500,65 +457,7 @@
           </div>
         </article>
 
-        <article class="feature-popout__content" data-feature-content="pigeon-timer" hidden>
-          <div class="feature-popout__header">
-            <p class="section__eyebrow">IoT & Embedded Systems</p>
-            <h2>Pigeon Race Timer: automated arrival timing gate & mobile sync.</h2>
-            <p>
-              An automated race clocking system combining an ESP32 optical IR beam and RFID loft gate
-              with a cross-platform Expo React Native mobile app synced via Firebase Realtime Database.
-            </p>
-          </div>
 
-          <div class="feature-popout__grid">
-            <div class="feature-popout__copy">
-              <dl class="feature-popout__facts">
-                <div>
-                  <dt>Problem & Status</dt>
-                  <dd>Proprietary race clocks are expensive and manual logging risks timestamp disputes. Working hardware & mobile prototype.</dd>
-                </div>
-                <div>
-                  <dt>Stack</dt>
-                  <dd>ESP32, C/C++ firmware, RC522 RFID, KY-032 IR sensor, Firebase RTDB, React Native, and Expo.</dd>
-                </div>
-                <div>
-                  <dt>Measured Result</dt>
-                  <dd>Sub-100ms arrival detection, anti-tamper duplicate filtering, and millisecond-accurate velocity calculation.</dd>
-                </div>
-              </dl>
-
-              <div class="feature-popout__actions">
-                <a href="projects.html?project=pigeon-race-timer-system" class="inline-link" data-feature-close>View project card</a>
-                <a href="https://github.com/kylesantos0411/Pigeon-Race-Timer" target="_blank" rel="noreferrer" class="inline-link">
-                  Open repository
-                </a>
-              </div>
-            </div>
-
-            <figure class="feature-popout__hero-image">
-              <img src="assets/images/pigeon-timer/pigeon-active-race.png"
-                alt="Pigeon Race Timer active race screen showing flight duration and velocity tracking" width="1280" height="800">
-            </figure>
-          </div>
-
-          <div class="feature-popout__media-grid" aria-label="Pigeon Race Timer system screens">
-            <figure>
-              <img src="assets/images/pigeon-timer/pigeon-dashboard.png" alt="Pigeon Race Timer loft dashboard and bird management"
-                width="1280" height="800">
-              <figcaption>Loft dashboard</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/pigeon-timer/pigeon-active-race.png" alt="Pigeon Race Timer live race clocking interface"
-                width="1280" height="800">
-              <figcaption>Active race tracking</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/pigeon-timer/pigeon-result.png" alt="Pigeon Race Timer official verified results and rankings"
-                width="1280" height="800">
-              <figcaption>Race results & leaderboard</figcaption>
-            </figure>
-          </div>
-        </article>
 
         <article class="feature-popout__content" data-feature-content="sentia" hidden>
           <div class="feature-popout__header">
@@ -620,125 +519,7 @@
           </div>
         </article>
 
-        <article class="feature-popout__content" data-feature-content="boost-vlog" hidden>
-          <div class="feature-popout__header">
-            <p class="section__eyebrow">AI Media Automation</p>
-            <h2>Boost Vlog: end-to-end automated video editing pipeline.</h2>
-            <p>
-              An automated creator suite that ingests raw footage, transcribes speech, cuts silences,
-              generates titles/descriptions, and renders timeline compositions using Remotion.
-            </p>
-          </div>
 
-          <div class="feature-popout__grid">
-            <div class="feature-popout__copy">
-              <dl class="feature-popout__facts">
-                <div>
-                  <dt>Problem & Status</dt>
-                  <dd>Manual vlog editing is tedious and repetitive. Working production pipeline with FastAPI & Remotion web UI.</dd>
-                </div>
-                <div>
-                  <dt>Stack</dt>
-                  <dd>FastAPI, Python, Remotion, React 19, TypeScript, faster-whisper, PySceneDetect, Claude 3.5 Sonnet, and Gemini.</dd>
-                </div>
-                <div>
-                  <dt>Measured Result</dt>
-                  <dd>Reduces rough cut editing time by >80%, automates audio ducking (-12dB), and delivers high-CTR YouTube metadata.</dd>
-                </div>
-              </dl>
-
-              <div class="feature-popout__actions">
-                <a href="projects.html?project=boost-vlog" class="inline-link" data-feature-close>View project card</a>
-                <a href="https://github.com/kylesantos0411/Boost-Vlog" target="_blank" rel="noreferrer" class="inline-link">
-                  Open repository
-                </a>
-              </div>
-            </div>
-
-            <figure class="feature-popout__hero-image">
-              <img src="assets/images/boost-vlog/boost-vlog-timeline.png"
-                alt="Boost Vlog multi-track Remotion video timeline editor" width="1280" height="800">
-            </figure>
-          </div>
-
-          <div class="feature-popout__media-grid" aria-label="Boost Vlog pipeline screens">
-            <figure>
-              <img src="assets/images/boost-vlog/boost-vlog-timeline.png" alt="Boost Vlog multi-track video timeline and preview player"
-                width="1280" height="800">
-              <figcaption>Multi-track timeline</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/boost-vlog/boost-vlog-pipeline.png" alt="Boost Vlog automated transcription and scene analysis pipeline"
-                width="1280" height="800">
-              <figcaption>AI processing queue</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/boost-vlog/boost-vlog-publish.png" alt="Boost Vlog YouTube publishing and metadata generation screen"
-                width="1280" height="800">
-              <figcaption>Export & publishing</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article class="feature-popout__content" data-feature-content="sire-leather" hidden>
-          <div class="feature-popout__header">
-            <p class="section__eyebrow">Software Product</p>
-            <h2>SIRE Leather Studio: luxury handcrafted leather goods store.</h2>
-            <p>
-              A handcrafted full-grain leather goods ordering system with dynamic catalog filtering, cart calculations,
-              Philippine payment handoff (GCash/Maya/COD), live order tracker, and admin editor.
-            </p>
-          </div>
-
-          <div class="feature-popout__grid">
-            <div class="feature-popout__copy">
-              <dl class="feature-popout__facts">
-                <div>
-                  <dt>Problem & Status</dt>
-                  <dd>Independent artisan studios need lightweight commerce tailored for Philippine payments. Live ordering platform.</dd>
-                </div>
-                <div>
-                  <dt>Stack</dt>
-                  <dd>JavaScript (ESM), HTML5, CSS Custom Properties, LocalStorage, Node.js server, and SHA-256 Auth.</dd>
-                </div>
-                <div>
-                  <dt>Measured Result</dt>
-                  <dd>100% test pass rate across 24 unit tests, zero external framework bloat, and hardened rate-limited admin panel.</dd>
-                </div>
-              </dl>
-
-              <div class="feature-popout__actions">
-                <a href="projects.html?project=sire-leather-studio" class="inline-link" data-feature-close>View project card</a>
-                <a href="https://github.com/kylesantos0411/SIRE-Leather" target="_blank" rel="noreferrer" class="inline-link">
-                  Open repository
-                </a>
-              </div>
-            </div>
-
-            <figure class="feature-popout__hero-image">
-              <img src="assets/images/sire-leather/sire-storefront.png"
-                alt="SIRE Leather Studio luxury storefront and product catalog" width="1280" height="800">
-            </figure>
-          </div>
-
-          <div class="feature-popout__media-grid" aria-label="SIRE Leather Studio screens">
-            <figure>
-              <img src="assets/images/sire-leather/sire-storefront.png" alt="SIRE Leather Studio responsive product storefront"
-                width="1280" height="800">
-              <figcaption>Luxury storefront</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/sire-leather/sire-orders.png" alt="SIRE Leather Studio live order tracking and status progression"
-                width="1280" height="800">
-              <figcaption>Order tracker</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/sire-leather/sire-admin.png" alt="SIRE Leather Studio authenticated admin inventory management"
-                width="1280" height="800">
-              <figcaption>Authenticated admin CMS</figcaption>
-            </figure>
-          </div>
-        </article>
 
         <article class="feature-popout__content" data-feature-content="log-pose-tcg" hidden>
           <div class="feature-popout__header">
