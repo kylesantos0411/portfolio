@@ -160,7 +160,7 @@
       "name": "SENTIA",
       "repo": "kylesantos0411/SENTIA",
       "year": 2026,
-      "priority": 5,
+      "priority": 4,
       "updated": "Desktop Application",
       "category": "AI Desktop Application",
       "status": "Windows desktop build",
@@ -212,7 +212,7 @@
       "name": "Log Pose TCG",
       "repo": "kylesantos0411/log-pose-tcg",
       "year": 2026,
-      "priority": 8,
+      "priority": 5,
       "updated": "Mobile Application",
       "category": "Mobile Application",
       "status": "Flutter & Supabase app",
@@ -257,14 +257,15 @@
       "kind": "app",
       "links": {
         "github": "https://github.com/kylesantos0411/log-pose-tcg",
-        "notes": "PROJECTS/Log Pose TCG/README.md"
+        "notes": "PROJECTS/Log Pose TCG/README.md",
+        "live": "https://logposetcg.vercel.app"
       }
     },
     {
       "name": "TapAndGo — NFC Review & Landing Platform",
       "repo": "kylesantos0411/TapAndGo",
       "year": 2026,
-      "priority": 9,
+      "priority": 6,
       "updated": "IoT & Web Platform",
       "category": "IoT & Web Platform",
       "status": "Live client platform",
@@ -321,7 +322,7 @@
       "name": "Smart Pet Feeder System",
       "repo": "",
       "year": 2026,
-      "priority": 30,
+      "priority": 7,
       "updated": "Automation prototype",
       "category": "Automation",
       "status": "Mechatronics build",
